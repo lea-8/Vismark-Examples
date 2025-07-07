@@ -4,7 +4,13 @@
   import * as d3 from 'd3';
   import * as Plot from '@observablehq/plot';
 
-  let { dataPath = `data/aapl.csv`, lad="N09000005", xP = "sepalLength", yP = "petalLength" } = $props();
+  let colours = d3[`schemeObservable10`];
+  let { 
+    dataPath = `data/aapl.csv`, 
+    lad="N09000005", 
+    xData = "", 
+    yData = "" 
+  } = $props();
   let data;
 
   async function loadData() {
@@ -13,11 +19,20 @@
   onMount(async () => {
     await loadData();
 
-    plotArea();
+    plotArea(yData);
     datasetWarning();
   });
 
-  function plotArea() {
+  function gatherLines(yArray) {
+    let linePlots = []
+    for (let i = 0; i < yArray.length; i++) {
+      linePlots.push(Plot.lineY(data, {x: xData, y: yArray[i], stroke: colours[i]}))
+    }
+
+    return linePlots;
+  }
+
+  function plotArea(yArray) {
     let areaChartDiv = document.querySelector('#area-chart')
     if (areaChartDiv) {
       let plotGraph = Plot.plot({
@@ -25,17 +40,15 @@
         marginRight: 20,
         marginBottom: 30,
         marginLeft: 40,
+        // color: {legend: true},  // TODO: https://observablehq.com/@tophtucker/plot-coloring-lines-in-wide-untidy-data
         grid: true,
         title: "Apple share price over time",
         caption: "Source: https://observablehq.com/@observablehq/sample-datasets",
         marks: [
           Plot.ruleY([0]),
           Plot.axisX({ticks: "3 months", anchor: "bottom", label: "Date", labelAnchor: "left"}),
-          Plot.axisY({anchor: "left", label: "Price", labelAnchor: "top"}),          
-          Plot.lineY(data, {x: "Date", y: "Open", stroke: "red"}),
-          Plot.lineY(data, {x: "Date", y: "High", stroke: "blue"}),
-          Plot.lineY(data, {x: "Date", y: "Low", stroke: "green"}),
-          Plot.lineY(data, {x: "Date", y: "Close", stroke: "orange"}),
+          Plot.axisY({anchor: "left", label: "Price", labelAnchor: "top"}),
+          ...gatherLines(yArray),
           Plot.gridX(),
           Plot.frame()
         ]

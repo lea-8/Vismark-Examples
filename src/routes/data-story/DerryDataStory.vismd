@@ -12,7 +12,9 @@ author: L A
   // import Column;
 
   // import Widget;
-  import AreaChart from '$lib/components/charts/AreaChart.svelte';
+  import LineChart from '$lib/components/charts/LineChart.svelte';
+
+  let yData = ["Open", "High", "Low", "Close"];
 </script>
 
 # The Impact of Co-Benefits
@@ -25,7 +27,11 @@ Derry City and Strabane District Council face a challenge shared by local author
 
 By providing accessible, place and co-benefit specific data, the Atlas provides actionable information that demonstrates the connection between climate action and social and economic challenges facing Derry and Strabane. It shows that implementing net-zero actions like shifts to active travel would generate £165 million in health benefits, with air quality improvements of £110 million and reductions in noise pollution worth £134 million, valued through Green Book methodologies[^1].
 
-<AreaChart />
+<LineChart 
+  dataPath="data/aapl.csv" 
+  xData="Date"
+  yData={yData}
+/>
 
 Per household, these values equal an average of ~£2,500 across all co-benefit types over the period 2025 – 2050 and are directly attributable to individuals as well as bodies like the NHS. These values can be used for accelerating investment in public health and help to address societal challenges present in Derry City and Strabane, such as high levels of deprivation and poor health[^2].
 
