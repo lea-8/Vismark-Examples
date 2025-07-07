@@ -79,11 +79,30 @@ Detailed breakdown of temporal trends for total average co-benefits and types of
 
 We describe the distribution of household economic factors aggregated on the data zone level and the different level of co-benefits received by those data zones.
 
+<Grid columns={3}>
+  <Cell>
+    <Grid columns={2}>
+      <Cell>
+        A
+      </Cell>
+    </Grid>
+  </Cell>
 
-```
-<Grid>
+  <Cell>
+    B
+  </Cell>
 
-</ Grid>
-```
+  <Cell>
+    C
+  </Cell>
+
+  <Cell>
+    hide?
+  </Cell>
+
+  <Cell>
+    E
+  </Cell>
+</Grid>
 
 `<Footer />`
