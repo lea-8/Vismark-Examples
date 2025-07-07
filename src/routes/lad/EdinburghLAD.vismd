@@ -1,0 +1,89 @@
+---
+title: Edinburgh Local Authority Report
+author: L A
+yData: ["Open", "High", "Low", "Close"]
+
+---
+
+<script>
+  // import Header;
+  // import Footer;
+  import Grid from '$lib/components/pageElements/Grid.svelte';
+  import Cell from '$lib/components/pageElements/Cell.svelte';
+
+  // import Widget;
+  import LineChart from '$lib/components/charts/LineChart.svelte';
+  import BarChart from '$lib/components/charts/BarChart.svelte';
+  import AreaChart from '$lib/components/charts/AreaChart.svelte';
+</script>
+
+`<Header />`
+
+```<Widget>
+
+# City of Edinburgh
+
+</Widget>
+```
+
+### OVERVIEW
+## What co-benefits would this area receive?
+
+We model 11 types of co-benefits, based on the Climate Change Committee’s Seventh Carbon Budget, from 2025 to 2050 at the data zone level across the UK.
+
+```
+<Grid>
+
+</ Grid>
+```
+
+### TEMPORAL TRENDS
+## How will co-benefits change over time?
+
+Detailed breakdown of temporal trends for total average co-benefits and types of co-benefits.
+
+<Grid columns={2}>
+  <Cell>
+
+    #### Total co-benefit distribution from 2025-2049 (vs. UK Average)
+
+    Aggregated values from 2025-2049 in City of Edinburgh compared to average value of benefits received across all local authorities in UK.
+
+    <BarChart
+      titleData="English letter ocurrences"
+      dataPath="data/alphabet.csv" 
+      xData="letter"
+      yData="frequency"
+    />
+
+  </Cell>
+  
+  <Cell>
+
+    #### Co-benefit gain/loss for City of Edinburgh over 5 year intervals
+
+    Total gains and losses are shown at five-year intervals for each co-benefit. The curve between points is smoothed to show the general trends.
+
+    <AreaChart 
+      titleData="Unemployement over time"
+      dataPath="data/unemployment.csv" 
+      xData="date"
+      yData="unpemployed"
+    />
+
+  </Cell>
+</Grid>
+
+### Households
+## City of Edinburgh social-economic factors
+
+We describe the distribution of household economic factors aggregated on the data zone level and the different level of co-benefits received by those data zones.
+
+
+```
+<Grid>
+
+</ Grid>
+```
+
+`<Footer />`

@@ -4,10 +4,10 @@
   import * as d3 from 'd3';
   import * as Plot from '@observablehq/plot';
 
-  let colours = d3[`schemeObservable10`];
+  import { colours } from './chartglobals.js';
+  
   let { 
-    dataPath = `data/aapl.csv`, 
-    lad="N09000005", 
+    dataPath = `data/alphabet.csv`, 
     xData = "", 
     yData = "" 
   } = $props();
@@ -19,7 +19,7 @@
   onMount(async () => {
     await loadData();
 
-    plotArea(yData);
+    plotLine(yData);
     datasetWarning();
   });
 
@@ -32,9 +32,9 @@
     return linePlots;
   }
 
-  function plotArea(yArray) {
-    let areaChartDiv = document.querySelector('#area-chart')
-    if (areaChartDiv) {
+  function plotLine(yArray) {
+    let lineChartDiv = document.querySelector('#line-chart')
+    if (lineChartDiv) {
       let plotGraph = Plot.plot({
         marginTop: 20,
         marginRight: 20,
@@ -53,14 +53,15 @@
           Plot.frame()
         ]
       });
-      areaChartDiv.append(plotGraph)
+      lineChartDiv.append(plotGraph)
     }
   }
 
   function datasetWarning() {
-    let datasetWarningDiv = document.querySelector('#dataset-warning')
+    let datasetWarningDiv = document.querySelector('#line-warning')
     if (datasetWarningDiv) {
       let plotGraph = Plot.plot({
+      marginLeft: 40,
       marks: [
         Plot.frame(),
         Plot.text(["Illustrative dataset used."], {frameAnchor: "middle"})
@@ -71,5 +72,5 @@
   }
 </script>
 
-<div id='dataset-warning'></div>
-<div id='area-chart'></div>
+<div id='line-warning'></div>
+<div id='line-chart'></div>

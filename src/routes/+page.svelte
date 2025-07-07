@@ -7,7 +7,7 @@
 <p>Some example pages can be found below:</p>
 <ol>
   <li><a href="{base}/data-story">Derry data story</a></li>
-  <li><a href="#">City of Edinburgh LAD</a></li>
+  <li><a href="{base}/lad">City of Edinburgh LAD</a></li>
   <li><a href="#">Air quality improvements</a></li>
 </ol>
 <p>For more details on installing and using this tool, please see [TODO - link(s)]</p>

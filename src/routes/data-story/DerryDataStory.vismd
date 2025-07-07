@@ -1,20 +1,12 @@
 ---
 title: Derry data story
 author: L A
+yData: ["Open", "High", "Low", "Close"]
 
 ---
 
 <script>
-  // import Header;
-  // import Footer;
-  // import Grid;
-  // import Row;
-  // import Column;
-
-  // import Widget;
   import LineChart from '$lib/components/charts/LineChart.svelte';
-
-  let yData = ["Open", "High", "Low", "Close"];
 </script>
 
 # The Impact of Co-Benefits
