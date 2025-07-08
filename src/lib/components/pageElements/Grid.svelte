@@ -1,7 +1,8 @@
 <script>
-  let { 
+  let {
     columns = 2,
     gap = 2,
+    showGrid = false
   } = $props();
 </script>
 
@@ -9,7 +10,7 @@
 <!-- svelte-ignore slot_element_deprecated -->
 <div 
   class="grid-layout"
-  style="--num-columns: {columns}"
+  style="--num-columns: {columns}; --show-grid: {showGrid}"
 >
   <slot />
 </div>
@@ -19,8 +20,8 @@
     display: grid;
     grid-template-columns: repeat(var(--num-columns), 1fr);
     gap: 1rem;
-    border: 2px solid #f76707;
+    border: if(style(--show-grid: true): 2px solid #f76707; else: 2px solid #ffffff); 
     border-radius: 5px;
-    background-color: rgb(248, 248, 248);
+    /* background-color: rgb(248, 248, 248); */
   }
 </style>

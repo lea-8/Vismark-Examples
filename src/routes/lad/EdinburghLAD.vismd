@@ -1,27 +1,29 @@
 ---
-title: Edinburgh Local Authority Report
+title: Edinburgh local authority report
 author: L A
 yData: ["Open", "High", "Low", "Close"]
 
 ---
 
 <script>
-  // import Header;
+  import Header from '$lib/components/pageElements/Header.svelte';
   // import Footer;
   import Grid from '$lib/components/pageElements/Grid.svelte';
   import Cell from '$lib/components/pageElements/Cell.svelte';
 
-  // import Widget;
   import LineChart from '$lib/components/charts/LineChart.svelte';
   import BarChart from '$lib/components/charts/BarChart.svelte';
   import AreaChart from '$lib/components/charts/AreaChart.svelte';
 </script>
 
-`<Header />`
+<Header />
 
-```<Widget>
+```
+<Widget>
 
 # City of Edinburgh
+
+...
 
 </Widget>
 ```
@@ -42,7 +44,7 @@ We model 11 types of co-benefits, based on the Climate Change Committee’s Seve
 
 Detailed breakdown of temporal trends for total average co-benefits and types of co-benefits.
 
-<Grid columns={2}>
+<Grid columns={2} showGrid={false}>
   <Cell>
 
     #### Total co-benefit distribution from 2025-2049 (vs. UK Average)
@@ -79,9 +81,9 @@ Detailed breakdown of temporal trends for total average co-benefits and types of
 
 We describe the distribution of household economic factors aggregated on the data zone level and the different level of co-benefits received by those data zones.
 
-<Grid columns={3}>
+<Grid columns={3} showGrid={true}>
   <Cell>
-    <Grid columns={2}>
+    <Grid columns={2} showGrid={true}>
       <Cell>
         A
       </Cell>
