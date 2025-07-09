@@ -17,26 +17,61 @@ author: L A
 
 <Header />
 
-```
-<Widget>
+`<Widget>`
 
+<Cell>
+
+### Local Authority Report
 # City of Edinburgh
 
-...
+Explore how this local authority will benefit from achieving Net Zero and learn about the characteristics of its households.
 
-</Widget>
-```
+`<InteractiveElement />`
+
+|                    |                     |
+|--------------------|---------------------|
+| **£1.230 billion** | Local area benefits |
+| **£2339.8**        | Per capita benefits |
+
+</Cell>
+
+`</Widget>`
 
 ### OVERVIEW
 ## What co-benefits would this area receive?
 
 We model 11 types of co-benefits, based on the Climate Change Committee’s Seventh Carbon Budget, from 2025 to 2050 at the data zone level across the UK.
 
-```
-<Grid>
+<Grid columns={2} showGrid={true}>
+  <Cell>
 
-</ Grid>
-```
+  #### Distribution of the cobenefit per data zone compared to UK Average
+
+  Co-benefit values for City of Edinburgh compared to average value of benefits received across all local authorities in UK (grey).
+
+  `Chart 1`
+
+  <BarChart
+    titleData="English letter ocurrences"
+    dataPath="data/alphabet.csv" 
+    xData="letter"
+    yData="frequency"
+  />
+
+  </Cell>
+
+  <Cell>
+
+  #### Where is City of Edinburgh?
+
+  City of Edinburgh has been highlighted in dark grey on this UK map.
+
+  *Scroll for zooming in and out
+
+  `<MapChart>`
+
+  </Cell>
+</Grid>
 
 ### TEMPORAL TRENDS
 ## How will co-benefits change over time?
@@ -46,31 +81,31 @@ Detailed breakdown of temporal trends for total average co-benefits and types of
 <Grid columns={2} showGrid={false}>
   <Cell>
 
-    #### Total co-benefit distribution from 2025-2049 (vs. UK Average)
+  #### Total co-benefit distribution from 2025-2049 (vs. UK Average)
 
-    Aggregated values from 2025-2049 in City of Edinburgh compared to average value of benefits received across all local authorities in UK.
+  Aggregated values from 2025-2049 in City of Edinburgh compared to average value of benefits received across all local authorities in UK.
 
-    <BarChart
-      titleData="English letter ocurrences"
-      dataPath="data/alphabet.csv" 
-      xData="letter"
-      yData="frequency"
-    />
+  <BarChart
+    titleData="English letter ocurrences"
+    dataPath="data/alphabet.csv" 
+    xData="letter"
+    yData="frequency"
+  />
 
   </Cell>
   
   <Cell>
 
-    #### Co-benefit gain/loss for City of Edinburgh over 5 year intervals
+  #### Co-benefit gain/loss for City of Edinburgh over 5 year intervals
 
-    Total gains and losses are shown at five-year intervals for each co-benefit. The curve between points is smoothed to show the general trends.
+  Total gains and losses are shown at five-year intervals for each co-benefit. The curve between points is smoothed to show the general trends.
 
-    <AreaChart 
-      titleData="Unemployement over time"
-      dataPath="data/unemployment.csv" 
-      xData="date"
-      yData="unpemployed"
-    />
+  <AreaChart 
+    titleData="Unemployement over time"
+    dataPath="data/unemployment.csv" 
+    xData="date"
+    yData="unpemployed"
+  />
 
   </Cell>
 </Grid>
@@ -97,7 +132,7 @@ We describe the distribution of household economic factors aggregated on the dat
     C
   </Cell>
 
-  <Cell>
+  <Cell hideCell={true}>
     hide?
   </Cell>
 

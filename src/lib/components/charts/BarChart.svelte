@@ -13,6 +13,7 @@
     yData = "" 
   } = $props();
   let data;
+  let chartContainer;
 
   async function loadData() {
     data = await d3.csv(dataPath, d3.autoType);
@@ -25,27 +26,33 @@
   });
 
   function plotBar(yArray) {
-    let barChartDiv = document.querySelector('#bar-chart')
-    if (barChartDiv) {
-      let plotGraph =  Plot.plot({
-        marginTop: 20,
-        marginRight: 20,
-        marginBottom: 30,
-        marginLeft: 40,
-        title: titleData,
-        caption: "Source: https://observablehq.com/plot/features/plots#marks-option",
-        x: {padding: 0.4},
-        y: {grid: true},
-        marks: [
-          Plot.barY(data, {x: "letter", y: "frequency", dx: 2, dy: 2}),
-          Plot.barY(data, {x: "letter", y: "frequency", fill: "green", dx: -2, dy: -2}),
-          Plot.frame()
-        ]
-      });
-      barChartDiv.append(plotGraph)
-    }
+    // let barChartDiv = document.querySelector('#bar-chart')
+    // if (barChartDiv) {
+    let plotGraph =  Plot.plot({
+      marginTop: 20,
+      marginRight: 20,
+      marginBottom: 30,
+      marginLeft: 40,
+      title: titleData,
+      caption: "Source: https://observablehq.com/plot/features/plots#marks-option",
+      x: {padding: 0.4},
+      y: {grid: true},
+      marks: [
+        Plot.barY(data, {x: "letter", y: "frequency", dx: 2, dy: 2}),
+        Plot.barY(data, {x: "letter", y: "frequency", fill: "green", dx: -2, dy: -2}),
+        Plot.frame()
+      ]
+    });
+      // barChartDiv.append(plotGraph)
+    // }
+    // chartContainer.innerHTML = ''; // clear any existing chart
+    chartContainer.appendChild(plotGraph);
+
+    return () => plotGraph.remove();
   }
 </script>
 
-<div id='bar-warning'></div>
-<div id='bar-chart'></div>
+<!-- <div id='bar-warning'></div>
+<div id='bar-chart'></div> -->
+
+<div bind:this={chartContainer}></div>
