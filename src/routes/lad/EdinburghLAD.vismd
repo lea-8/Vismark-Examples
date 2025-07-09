@@ -17,7 +17,7 @@ author: L A
 
 <Header />
 
-`<Widget>`
+<!-- `<Widget>` -->
 
 <Cell>
 
@@ -35,14 +35,14 @@ Explore how this local authority will benefit from achieving Net Zero and learn 
 
 </Cell>
 
-`</Widget>`
+<!-- `</Widget>` -->
 
 ### OVERVIEW
 ## What co-benefits would this area receive?
 
 We model 11 types of co-benefits, based on the Climate Change Committee’s Seventh Carbon Budget, from 2025 to 2050 at the data zone level across the UK.
 
-<Grid columns={2} showGrid={true}>
+<Grid columns={2}>
   <Cell>
 
   #### Distribution of the cobenefit per data zone compared to UK Average
@@ -110,34 +110,94 @@ Detailed breakdown of temporal trends for total average co-benefits and types of
   </Cell>
 </Grid>
 
-### Households
+### HOUSEHOLDS
 ## City of Edinburgh social-economic factors
 
 We describe the distribution of household economic factors aggregated on the data zone level and the different level of co-benefits received by those data zones.
 
-<Grid columns={3} showGrid={true}>
+<Grid columns={3} showGrid={false}>
   <Cell>
-    <Grid columns={2} showGrid={true}>
-      <Cell>
-        A
-      </Cell>
-    </Grid>
+
+  #### Comparing the Socio-Economic factors distributions of City of Edinburgh and UK, and their correlation with co-benefits.
+
+  **Legend:**
+
+  ...
+
+  ---
+
+  **Interpreting the charts:**
+  
+  **Barchart:** Each bar represents the normalized frequency of datazones linked to a given social economic factor value.
+
+  **Scatterplot:** Each dot represents a datazone inside City of Edinburgh. The cloud shows the distribution for UK.
+
   </Cell>
 
   <Cell>
-    B
+
+  #### Data zones distribution (vs. UK average)
+
+  The histogram shows the number of data zones distributed across different household social economic factors.
+    
+  <BarChart
+    titleData="English letter ocurrences"
+    dataPath="data/alphabet.csv" 
+    xData="letter"
+    yData="frequency"
+  />
+
   </Cell>
 
   <Cell>
-    C
-  </Cell>
 
-  <Cell hideCell={true}>
-    hide?
+  #### Co-benefits received by data zones across EPC Band values
+
+  Density plot refers to UK distribution while the scattered points refer to data zones in City of Edinburgh.
+
+  `<BoxPlot>`
+
   </Cell>
 
   <Cell>
-    E
+
+  **Correlation ≠ Causation:** The scatter plots represent modelled associations and should not be interpreted as direct causal relationships.
+
+  **Discrete scales:** The first set of socio-economic factors are using categorical values where the x-axis is non-linear: EPC, Tenure, Typology, Fuel type, Gas flag, Number of cars.
+
+  </Cell>
+
+  <Cell>
+
+  #### Data zonesData zones are standard statitical geographies in UK that comprise between 400 and 1200 households. distribution (vs. UK average)
+
+  The histogram shows the number of data zones distributed across different household social economic factors.
+
+  <BarChart
+    titleData="English letter ocurrences"
+    dataPath="data/alphabet.csv" 
+    xData="letter"
+    yData="frequency"
+  />
+
+  </Cell>
+
+  <Cell>
+  
+  Another
+
+  `<BoxPlot>`
+
+  </Cell>
+
+  <Cell hideCell={true}></Cell>
+
+  <Cell>
+    ...
+  </Cell>
+
+  <Cell>
+    ...
   </Cell>
 </Grid>
 
