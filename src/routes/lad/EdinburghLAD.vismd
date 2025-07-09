@@ -1,13 +1,12 @@
 ---
 title: Edinburgh local authority report
 author: L A
-yData: ["Open", "High", "Low", "Close"]
 
 ---
 
 <script>
   import Header from '$lib/components/pageElements/Header.svelte';
-  // import Footer;
+  import Footer from '$lib/components/pageElements/Footer.svelte';
   import Grid from '$lib/components/pageElements/Grid.svelte';
   import Cell from '$lib/components/pageElements/Cell.svelte';
 
@@ -107,4 +106,4 @@ We describe the distribution of household economic factors aggregated on the dat
   </Cell>
 </Grid>
 
-`<Footer />`
+<Footer />

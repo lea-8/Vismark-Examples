@@ -6,7 +6,7 @@
 <nav class="navbar">
     <div class="nav-left">
       <a href="{base}/" class="nav-item">
-        <img src="{base}/logo-grid-black-beta.png" alt="Logo" class="logo" />
+        <img src="{base}/logos/logo-grid-black-beta.png" alt="Logo" class="logo" />
       </a>
     </div>
 
@@ -109,10 +109,6 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-
-  .nav-item.inactive a {
-    cursor: not-allowed;
   }
 
   .nav-item.inactive a:hover {
