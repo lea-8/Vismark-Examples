@@ -5,23 +5,125 @@ author: L A
 ---
 
 <script>
-  // import Header;
-  // import Footer;
+  import Header from '$lib/components/pageElements/Header.svelte';
+  import Footer from '$lib/components/pageElements/Footer.svelte';
   import Grid from '$lib/components/pageElements/Grid.svelte';
   import Cell from '$lib/components/pageElements/Cell.svelte';
 
-  // import Widget;
   import LineChart from '$lib/components/charts/LineChart.svelte';
   import BarChart from '$lib/components/charts/BarChart.svelte';
   import AreaChart from '$lib/components/charts/AreaChart.svelte';
 </script>
 
-`<Header />`
+<Header />
 
-```
-<Widget>
+<Grid columns={1}>
+<Cell>
+<Grid columns={2}>
+  <Cell>
 
-# Air quality improvements
+  ### Co-Benefit Report
+  # Air quality improvements
 
-</Widget>
-```
+  The value of cleaner air, caused by a reduction in carbon-intensive activities like driving private cars or using gas boilers. This value is modelled through health improvements and reduced building damages.
+
+  </Cell>
+
+  <Cell>
+
+  |                                   |
+  |-----------------------------------|
+  | **£48.26 billion**                |
+  | National benefits                 |
+  | **£713.68**                       |
+  | Per capita benefits               |
+  | **30.20%**                        |
+  | Contribution to national benefits |
+
+  `<WaffleChart>`
+
+  </Cell>
+</Grid>
+</Cell>
+</Grid>
+
+### Overview
+
+<Grid columns={2}>
+  <Cell>
+
+  #### Total air quality improvements over time 2025-2050
+
+  Each bar shows the predicted total benefits in billion pounds for each five-year periods for all of UK.
+
+  <BarChart
+    titleData="English letter ocurrences"
+    dataPath="data/alphabet.csv" 
+    xData="letter"
+    yData="frequency"
+  />
+
+  `<DistPlot>`
+
+  </Cell>
+
+  <Cell>
+
+  #### Per Capita air quality improvements by UK local authorities
+
+  Each local authority is coloured by the predicted per capita benefits/cost, showing regional variation in how benefits/cost are distributed. Scroll for zooming in and out.
+
+  `<MapChart>`
+
+  </Cell>
+</Grid>
+
+### Socio-economic factors
+
+<Grid columns={3} showGrid={false}>
+  <Cell>
+
+  #### How air quality improvements vary by household social-economic factors
+
+  *Each chart shows how benefits or costs are distributed across UK local authorities in correlation with a specific household social-economic factor.*
+
+  <Cell>
+
+  **Legend:**
+  
+  The scatter points are coloured by nation. Click the buttons below to filter.
+
+  `<InteractiveElement>`
+
+  </Cell>
+
+  **Discrete scales:** The first set of socio-economic factors are using categorical values where the x-axis is non-linear.
+
+  **Correlation ≠ Causation:** The scatter plots represent modelled associations and should not be interpreted as direct causal relationships.
+
+  **Aggregated data:** Each socio-economic factor for a given local authority is aggregated   from the data zones within its boundary.
+
+  </Cell>
+
+  <Cell>
+
+  ### EPC Band
+
+  Energy efficiency rating for homes, from Band A (most efficient) to Band G (least efficient).
+
+  `<BoxPlot>`
+
+  </Cell>
+
+  <Cell>
+
+  ### Tenure
+
+  Relationship of occupant to the dwelling's ownership.
+
+  `<BoxPlot>`
+
+  </Cell>
+</Grid>
+
+<Footer />

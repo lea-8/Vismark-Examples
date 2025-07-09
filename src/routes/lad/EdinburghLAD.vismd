@@ -19,21 +19,23 @@ author: L A
 
 <!-- `<Widget>` -->
 
-<Cell>
+<Grid columns={1}>
+  <Cell>
 
-### Local Authority Report
-# City of Edinburgh
+  ### Local Authority Report
+  # City of Edinburgh
 
-Explore how this local authority will benefit from achieving Net Zero and learn about the characteristics of its households.
+  Explore how this local authority will benefit from achieving Net Zero and learn about the characteristics of its households.
 
-`<InteractiveElement />`
+  `<InteractiveElement />`
 
-|                    |                     |
-|--------------------|---------------------|
-| **£1.230 billion** | Local area benefits |
-| **£2339.8**        | Per capita benefits |
+  |                    |                     |
+  |--------------------|---------------------|
+  | **£1.230 billion** | Local area benefits |
+  | **£2339.8**        | Per capita benefits |
 
-</Cell>
+  </Cell>
+</Grid>
 
 <!-- `</Widget>` -->
 
