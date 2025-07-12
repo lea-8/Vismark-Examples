@@ -4,7 +4,7 @@
   import * as d3 from 'd3';
   import * as Plot from '@observablehq/plot';
 
-  import { datasetWarning } from '../warnings.js';
+  // import { datasetWarning } from '../warnings.js';
 
   let { 
     dataPath = `data/alphabet.csv`,
@@ -22,7 +22,7 @@
     await loadData();
 
     plotBar(yData);
-    datasetWarning("bar-warning");
+    // datasetWarning("bar-warning");
   });
 
   function plotBar(yArray) {

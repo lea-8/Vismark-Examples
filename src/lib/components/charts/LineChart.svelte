@@ -12,6 +12,7 @@
     yData = "" 
   } = $props();
   let data;
+  let chartContainer;
 
   async function loadData() {
     data = await d3.csv(dataPath, d3.autoType);
@@ -20,7 +21,7 @@
     await loadData();
 
     plotLine(yData);
-    datasetWarning();
+    // datasetWarning();
   });
 
   function gatherLines(yArray) {
@@ -33,44 +34,35 @@
   }
 
   function plotLine(yArray) {
-    let lineChartDiv = document.querySelector('#line-chart')
-    if (lineChartDiv) {
-      let plotGraph = Plot.plot({
-        marginTop: 20,
-        marginRight: 20,
-        marginBottom: 30,
-        marginLeft: 40,
-        // color: {legend: true},  // TODO: https://observablehq.com/@tophtucker/plot-coloring-lines-in-wide-untidy-data
-        grid: true,
-        title: "Apple share price over time",
-        caption: "Source: https://observablehq.com/@observablehq/sample-datasets",
-        marks: [
-          Plot.ruleY([0]),
-          Plot.axisX({ticks: "3 months", anchor: "bottom", label: "Date", labelAnchor: "left"}),
-          Plot.axisY({anchor: "left", label: "Price", labelAnchor: "top"}),
-          ...gatherLines(yArray),
-          Plot.gridX(),
-          Plot.frame()
-        ]
-      });
-      lineChartDiv.append(plotGraph)
-    }
-  }
-
-  function datasetWarning() {
-    let datasetWarningDiv = document.querySelector('#line-warning')
-    if (datasetWarningDiv) {
-      let plotGraph = Plot.plot({
+    // let lineChartDiv = document.querySelector('#line-chart')
+    // if (lineChartDiv) {
+    let plotGraph = Plot.plot({
+      marginTop: 20,
+      marginRight: 20,
+      marginBottom: 30,
       marginLeft: 40,
+      // color: {legend: true},  // TODO: https://observablehq.com/@tophtucker/plot-coloring-lines-in-wide-untidy-data
+      grid: true,
+      title: "Apple share price over time",
+      caption: "Source: https://observablehq.com/@observablehq/sample-datasets",
       marks: [
-        Plot.frame(),
-        Plot.text(["Illustrative dataset used."], {frameAnchor: "middle"})
+        Plot.ruleY([0]),
+        Plot.axisX({ticks: "3 months", anchor: "bottom", label: "Date", labelAnchor: "left"}),
+        Plot.axisY({anchor: "left", label: "Price", labelAnchor: "top"}),
+        ...gatherLines(yArray),
+        Plot.gridX(),
+        Plot.frame()
       ]
-      })
-      datasetWarningDiv.append(plotGraph)
-    }
+    });
+      // lineChartDiv.append(plotGraph)
+    // }
+    chartContainer.appendChild(plotGraph);
+
+    return () => plotGraph.remove();
   }
 </script>
 
-<div id='line-warning'></div>
-<div id='line-chart'></div>
+<!-- <div id='line-warning'></div>
+<div id='line-chart'></div> -->
+
+<div bind:this={chartContainer}></div>
