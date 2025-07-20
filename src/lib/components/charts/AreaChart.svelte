@@ -20,7 +20,6 @@
     await loadData();
 
     plotArea(yData);
-    // datasetWarning("area-warning");
   });
 
   function plotArea(yArray) {

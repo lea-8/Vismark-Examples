@@ -21,7 +21,6 @@
     await loadData();
 
     plotLine(yData);
-    // datasetWarning();
   });
 
   function gatherLines(yArray) {

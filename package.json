@@ -1,5 +1,5 @@
 {
-	"name": "vismark",
+	"name": "vismark-examples",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
@@ -45,6 +45,7 @@
 	],
 	"dependencies": {
 		"@observablehq/plot": "^0.6.17",
-		"d3": "^7.9.0"
+		"d3": "^7.9.0",
+		"vismark": "^0.1.0"
 	}
 }
