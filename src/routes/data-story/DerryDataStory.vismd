@@ -6,8 +6,7 @@ yData: ["Open", "High", "Low", "Close"]
 ---
 
 <script>
-  // TODO: change to vismark component
-  import LineChart from '$lib/components/charts/LineChart.svelte';
+  import LineChart from 'vismark/LineChart';
 </script>
 
 # The Impact of Co-Benefits
@@ -24,6 +23,7 @@ By providing accessible, place and co-benefit specific data, the Atlas provides 
   dataPath="data/aapl.csv" 
   xData="Date"
   yData={yData}
+  titleData="Apple share price over time"
 />
 <!-- yData={["Open", "High", "Low", "Close"]} -->
 
