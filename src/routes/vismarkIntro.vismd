@@ -1,6 +1,6 @@
 # Welcome to vismark examples
 
-This website takes you through some example pages created with vismark. All pages you can see here are defined as .vismd files and written entirely in markdown and custom components.
+This website takes you through some example pages created with vismark. Everything you see here is defined as .vismd files and written entirely in markdown and custom components.
 
 Some example pages can be found below:
 
@@ -8,4 +8,5 @@ Some example pages can be found below:
 2. [City of Edinburgh LAD](/lad)
 3. [Air quality improvements](/cobenefit)
 
-For more details on installing and using this tool, please see [TODO - link(s)]
+## Documentation
+For more details on installing and using this tool, please see the [Vismark Github page](https://github.com/lea-8/Vismark).

@@ -6,6 +6,7 @@ yData: ["Open", "High", "Low", "Close"]
 ---
 
 <script>
+  // TODO: change to vismark component
   import LineChart from '$lib/components/charts/LineChart.svelte';
 </script>
 
@@ -24,6 +25,7 @@ By providing accessible, place and co-benefit specific data, the Atlas provides 
   xData="Date"
   yData={yData}
 />
+<!-- yData={["Open", "High", "Low", "Close"]} -->
 
 Per household, these values equal an average of ~£2,500 across all co-benefit types over the period 2025 – 2050 and are directly attributable to individuals as well as bodies like the NHS. These values can be used for accelerating investment in public health and help to address societal challenges present in Derry City and Strabane, such as high levels of deprivation and poor health[^2].
 

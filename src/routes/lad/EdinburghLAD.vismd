@@ -5,14 +5,13 @@ author: L A
 ---
 
 <script>
-  import Header from '$lib/components/pageElements/Header.svelte';
-  import Footer from '$lib/components/pageElements/Footer.svelte';
+  import Header from 'vismark/Header';
+  import Footer from 'vismark/Footer';
   import Grid from '$lib/components/pageElements/Grid.svelte';
   import Cell from '$lib/components/pageElements/Cell.svelte';
 
-  import LineChart from '$lib/components/charts/LineChart.svelte';
+  import AreaChart from 'vismark/AreaChart';
   import BarChart from '$lib/components/charts/BarChart.svelte';
-  import AreaChart from '$lib/components/charts/AreaChart.svelte';
 </script>
 
 <Header />
@@ -103,10 +102,10 @@ Detailed breakdown of temporal trends for total average co-benefits and types of
   Total gains and losses are shown at five-year intervals for each co-benefit. The curve between points is smoothed to show the general trends.
 
   <AreaChart 
-    titleData="Unemployement over time"
-    dataPath="data/unemployment.csv" 
-    xData="date"
-    yData="unpemployed"
+    dataPath='/data/unemployment.csv'
+    xData='date'
+    yData='unemployed'
+    titleData='Unemployement over time'
   />
 
   </Cell>
