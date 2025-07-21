@@ -7,11 +7,11 @@ author: L A
 <script>
   import Header from 'vismark/Header';
   import Footer from 'vismark/Footer';
-  import Grid from '$lib/components/pageElements/Grid.svelte';
-  import Cell from '$lib/components/pageElements/Cell.svelte';
+  import Grid from 'vismark/Grid';
+  import Cell from 'vismark/Cell';
 
   import AreaChart from 'vismark/AreaChart';
-  import BarChart from '$lib/components/charts/BarChart.svelte';
+  import BarChart from 'vismark/BarChart';
 </script>
 
 <Header />

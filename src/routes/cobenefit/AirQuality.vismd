@@ -5,14 +5,13 @@ author: L A
 ---
 
 <script>
-  import Header from '$lib/components/pageElements/Header.svelte';
-  import Footer from '$lib/components/pageElements/Footer.svelte';
-  import Grid from '$lib/components/pageElements/Grid.svelte';
-  import Cell from '$lib/components/pageElements/Cell.svelte';
+  import Header from 'vismark/Header';
+  import Footer from 'vismark/Footer';
+  import Grid from 'vismark/Grid';
+  import Cell from 'vismark/Cell';
 
-  import LineChart from '$lib/components/charts/LineChart.svelte';
-  import BarChart from '$lib/components/charts/BarChart.svelte';
-  import AreaChart from '$lib/components/charts/AreaChart.svelte';
+  import AreaChart from 'vismark/AreaChart';
+  import BarChart from 'vismark/BarChart';
 </script>
 
 <Header />
