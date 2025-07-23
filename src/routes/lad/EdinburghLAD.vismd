@@ -43,7 +43,10 @@ author: L A
 
 We model 11 types of co-benefits, based on the Climate Change Committee’s Seventh Carbon Budget, from 2025 to 2050 at the data zone level across the UK.
 
+Explanation: This is a chart....
+
 <Grid columns={2}>
+  <!-- <Cell annotation={perCapita}> -->
   <Cell>
 
   #### Distribution of the cobenefit per data zone compared to UK Average
