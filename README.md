@@ -1,11 +1,9 @@
 # Vismark Examples
 
-Description
+This project showcases some examples of webpages created with [Vismark](https://github.com/lea-8/Vismark).
 
-Markdown functionality supported:
+To run locally, you can run:
 
-COMPONENTS:
-
-CHARTS
-
-LAYOUT manipulation
+``` bash
+npm run dev
+```
