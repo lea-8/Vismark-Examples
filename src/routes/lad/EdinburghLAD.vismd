@@ -2,6 +2,8 @@
 title: Edinburgh local authority report
 author: L A
 
+noiseCBColour: "#eb66a7"
+
 ---
 
 <script>
@@ -9,32 +11,48 @@ author: L A
   import Footer from 'vismark/Footer';
   import Grid from 'vismark/Grid';
   import Cell from 'vismark/Cell';
+  import Widget from 'vismark/Widget';
 
   import AreaChart from 'vismark/AreaChart';
   import BarChart from 'vismark/BarChart';
+  import Histogram from 'vismark/Histogram';
+  import BoxPlot from 'vismark/BoxPlot';
 </script>
 
 <Header />
 
 <!-- `<Widget>` -->
 
-<Grid columns={1}>
-  <Cell>
+<!-- <Grid columns={1}> -->
+  <Widget>
 
-  ### Local Authority Report
+  ### Local Authority Report `<Button text="Download"/>`
   # City of Edinburgh
 
   Explore how this local authority will benefit from achieving Net Zero and learn about the characteristics of its households.
 
+  |                    |                     |  |
+  |--------------------|---------------------|---|
+  | **£1.230 billion** | Local area benefits | |
+  | **£2339.8**        | Per capita benefits | |
+
+  <!-- ![f](/images/edi_bars.png)  -->
+
   `<InteractiveElement />`
 
-  |                    |                     |
-  |--------------------|---------------------|
-  | **£1.230 billion** | Local area benefits |
-  | **£2339.8**        | Per capita benefits |
+  </Widget>
 
-  </Cell>
-</Grid>
+  <!-- <Cell>
+
+  |                                   |
+  |-----------------------------------|
+  | **£1.230 billion**                |
+  | Local area benefits               |
+  | **£2339.8**                       |
+  | Per capita benefits               |
+
+  </Cell> -->
+<!-- </Grid> -->
 
 <!-- `</Widget>` -->
 
@@ -43,7 +61,7 @@ author: L A
 
 We model 11 types of co-benefits, based on the Climate Change Committee’s Seventh Carbon Budget, from 2025 to 2050 at the data zone level across the UK.
 
-Explanation: This is a chart....
+<!-- Explanation: This is a chart.... -->
 
 <Grid columns={2}>
   <!-- <Cell annotation={perCapita}> -->
@@ -53,13 +71,26 @@ Explanation: This is a chart....
 
   Co-benefit values for City of Edinburgh compared to average value of benefits received across all local authorities in UK (grey).
 
-  `Chart 1`
+  *Distribution of data zones (Normalized)*
 
-  <BarChart
-    titleData="English letter ocurrences"
-    dataPath="data/alphabet.csv" 
-    xData="letter"
-    yData="frequency"
+  <Histogram 
+    dataPath="data/olympians.csv" 
+    xData="weight"
+    yData="count"
+    fillData="sex"
+  />
+    <!-- titleData="Distribution of data zones (Normalized)" -->
+
+  #### 11 types of co-benefit values (vs. UK Average)
+
+  Co-benefit values for City of Edinburgh compared to average value of benefits received across all local authorities in UK (grey).
+
+  <BarChart 
+    dataPath="data/population-state-age.csv" 
+    xData="key"
+    yData="population"
+    fillData="key"
+    groupBy="state"
   />
 
   </Cell>
@@ -89,11 +120,12 @@ Detailed breakdown of temporal trends for total average co-benefits and types of
 
   Aggregated values from 2025-2049 in City of Edinburgh compared to average value of benefits received across all local authorities in UK.
 
-  <BarChart
-    titleData="English letter ocurrences"
-    dataPath="data/alphabet.csv" 
-    xData="letter"
-    yData="frequency"
+  <BarChart 
+    dataPath="data/population-state-age.csv" 
+    xData="key"
+    yData="population"
+    fillData="key"
+    groupBy="state"
   />
 
   </Cell>
@@ -103,12 +135,12 @@ Detailed breakdown of temporal trends for total average co-benefits and types of
   #### Co-benefit gain/loss for City of Edinburgh over 5 year intervals
 
   Total gains and losses are shown at five-year intervals for each co-benefit. The curve between points is smoothed to show the general trends.
-
+  
   <AreaChart 
     dataPath='/data/unemployment.csv'
     xData='date'
     yData='unemployed'
-    titleData='Unemployement over time'
+    fillData="industry"
   />
 
   </Cell>
@@ -119,90 +151,139 @@ Detailed breakdown of temporal trends for total average co-benefits and types of
 
 We describe the distribution of household economic factors aggregated on the data zone level and the different level of co-benefits received by those data zones.
 
-<Grid columns={3} showGrid={false}>
-  <Cell>
+<!-- <Grid columns={3}>
+</Grid> -->
 
-  #### Comparing the Socio-Economic factors distributions of City of Edinburgh and UK, and their correlation with co-benefits.
+<!--     ## [EPC Band](/#)
 
-  **Legend:**
+    Energy efficiency rating for homes, from Band A (most efficient) to Band G (least efficient). -->
 
-  ...
+<Cell>
+  <Grid columns={3} showGrid={false}>
+    <Cell>
 
-  ---
+    #### Comparing the Socio-Economic factors distributions of City of Edinburgh and UK, and their correlation with co-benefits.
 
-  **Interpreting the charts:**
-  
-  **Barchart:** Each bar represents the normalized frequency of datazones linked to a given social economic factor value.
+<Widget
+  borderColour="#f0f0f0"
+  backgroundColour="#f0f0f0"
+> 
 
-  **Scatterplot:** Each dot represents a datazone inside City of Edinburgh. The cloud shows the distribution for UK.
+**Legend:**
 
-  </Cell>
+black = City of Edinburgh
 
-  <Cell>
+grey = UK
 
-  #### Data zones distribution (vs. UK average)
+</Widget>
 
-  The histogram shows the number of data zones distributed across different household social economic factors.
+    </Cell>
+
+    <Cell>
+
+    #### Data zones distribution (vs. UK average)
+
+    The histogram shows the number of data zones distributed across different household social economic factors.
+      
+  <BarChart 
+    dataPath="data/population-state-age.csv" 
+    xData="key"
+    yData="population"
+    fillData="key"
+    groupBy="state"
+  />
+
+    </Cell>
+
+    <Cell>
+
+    #### Co-benefits received by data zones across EPC Band values
+
+    Density plot refers to UK distribution while the scattered points refer to data zones in City of Edinburgh.
+
+    <BoxPlot 
+      dataPath="data/morley.csv"
+      xData="Expt"
+      yData="Speed"
+      fillColour={noiseCBColour}
+    />
+
+    </Cell>
+
+    <Cell>
+
+    <Widget
+  borderColour="#f0f0f0"
+  backgroundColour="#f0f0f0"
+>
+
+**Interpreting the charts:**
+
+**Barchart:** Each bar represents the normalized frequency of datazones linked to a given social economic factor value.
+
+**Scatterplot:** Each dot represents a datazone inside City of Edinburgh. The cloud shows the distribution for UK.
+
+</Widget>
+
+    </Cell>
+
+    <Cell>
+
+    #### Data zonesData zones are standard statitical geographies in UK that comprise between 400 and 1200 households. distribution (vs. UK average)
+
+    The histogram shows the number of data zones distributed across different household social economic factors.
+
+  <BarChart 
+    dataPath="data/population-state-age.csv" 
+    xData="key"
+    yData="population"
+    fillData="key"
+    groupBy="state"
+  />
+
+    </Cell>
+
+    <Cell>
+
+    #### Co-benefits received by data zones across Tenure values
+
+    Density plot refers to UK distribution while the scattered points refer to data zones in City of Edinburgh.
     
-  <BarChart
-    titleData="English letter ocurrences"
-    dataPath="data/alphabet.csv" 
-    xData="letter"
-    yData="frequency"
-  />
+    <BoxPlot 
+      dataPath="data/morley.csv"
+      xData="Expt"
+      yData="Speed"
+      fillColour={noiseCBColour}
+    />
 
-  </Cell>
+    </Cell>
 
-  <Cell>
+<Cell>
 
-  #### Co-benefits received by data zones across EPC Band values
-
-  Density plot refers to UK distribution while the scattered points refer to data zones in City of Edinburgh.
-
-  `<BoxPlot>`
-
-  </Cell>
-
-  <Cell>
-
-  **Correlation ≠ Causation:** The scatter plots represent modelled associations and should not be interpreted as direct causal relationships.
-
-  **Discrete scales:** The first set of socio-economic factors are using categorical values where the x-axis is non-linear: EPC, Tenure, Typology, Fuel type, Gas flag, Number of cars.
-
-  </Cell>
-
-  <Cell>
-
-  #### Data zonesData zones are standard statitical geographies in UK that comprise between 400 and 1200 households. distribution (vs. UK average)
-
-  The histogram shows the number of data zones distributed across different household social economic factors.
-
-  <BarChart
-    titleData="English letter ocurrences"
-    dataPath="data/alphabet.csv" 
-    xData="letter"
-    yData="frequency"
-  />
-
-  </Cell>
-
-  <Cell>
+> **Correlation ≠ Causation:** The scatter plots represent modelled associations and should not be interpreted as direct causal relationships.
+>
+> **Discrete scales:** The first set of socio-economic factors are using categorical values where the x-axis is non-linear: EPC, Tenure, Typology, Fuel type, Gas flag, Number of cars.
   
-  Another
+</Cell>
 
-  `<BoxPlot>`
+    <Cell>
+      ...
+    </Cell>
 
-  </Cell>
+    <Cell>
+      ...
+    </Cell>
 
-  <Cell hideCell={true}></Cell>
+    <Cell hideCell={true}></Cell>
 
-  <Cell>
-    ...
-  </Cell>
+    <Cell>
+      ...
+    </Cell>
 
-  <Cell>
-    ...
-  </Cell>
-</Grid>
+    <Cell>
+      ...
+    </Cell>
+  </Grid>
+</Cell>
 
 <Footer />
