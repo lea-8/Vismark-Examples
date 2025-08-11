@@ -1,11 +1,15 @@
+<script>
+  import {base} from "$app/paths";
+</script>
+
 # Welcome to vismark examples
 
 This website takes you through some example pages created with vismark. Everything you see here is defined as .vismd files and written entirely in markdown and custom components.
 
 Some example pages can be found below:
 
-1. [Derry data story](/data-story)
-2. [City of Edinburgh LAD](/lad)
+1. [Derry data story](data-story)
+2. [City of Edinburgh LAD](lad)
 3. [Air quality improvements](/cobenefit)
 4. [Methods](/methods)
 5. [About](/about)
