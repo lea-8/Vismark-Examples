@@ -6,7 +6,9 @@
     "build": "vite build && npm run prepack",
     "preview": "vite preview",
     "prepare": "svelte-kit sync || echo ''",
-    "prepack": "svelte-kit sync && svelte-package && publint"
+    "prepack": "svelte-kit sync && svelte-package && publint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "files": [
     "dist",
@@ -31,10 +33,12 @@
   "devDependencies": {
     "@playwright/test": "^1.54.1",
     "@sveltejs/adapter-auto": "^6.0.0",
+    "@sveltejs/adapter-static": "^3.0.9",
     "@sveltejs/kit": "^2.16.0",
     "@sveltejs/package": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^5.0.0",
     "@types/node": "^24.1.0",
+    "gh-pages": "^6.3.0",
     "mdsvex": "^0.12.3",
     "publint": "^0.3.2",
     "remark-footnotes": "2.0",
@@ -48,6 +52,6 @@
   "dependencies": {
     "@observablehq/plot": "^0.6.17",
     "d3": "^7.9.0",
-    "vismark": "^1.0.1"
+    "vismark": "^1.0.2"
   }
 }

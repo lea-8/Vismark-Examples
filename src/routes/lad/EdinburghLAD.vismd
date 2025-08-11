@@ -21,26 +21,26 @@ noiseCBColour: "#eb66a7"
 
 <Header />
 
-<!-- `<Widget>` -->
+<Widget
+  borderColour="#f8f8f8"
+  backgroundColour="#f8f8f8"
+>
 
-<!-- <Grid columns={1}> -->
-  <Widget>
-
-  ### Local Authority Report `<Button text="Download"/>`
+  ### Local Authority Report `<Button text="Download Page Data"/>`
   # City of Edinburgh
 
   Explore how this local authority will benefit from achieving Net Zero and learn about the characteristics of its households.
 
-  |                    |                     |  |
-  |--------------------|---------------------|---|
-  | **£1.230 billion** | Local area benefits | |
-  | **£2339.8**        | Per capita benefits | |
+  |                    |                     | 
+  |--------------------|---------------------|
+  | **£1.230 billion** | Local area benefits |
+  | **£2339.8**        | Per capita benefits |
 
   <!-- ![f](/images/edi_bars.png)  -->
 
   `<InteractiveElement />`
 
-  </Widget>
+</Widget>
 
   <!-- <Cell>
 
@@ -52,9 +52,7 @@ noiseCBColour: "#eb66a7"
   | Per capita benefits               |
 
   </Cell> -->
-<!-- </Grid> -->
 
-<!-- `</Widget>` -->
 
 ### OVERVIEW
 ## What co-benefits would this area receive?
@@ -64,7 +62,6 @@ We model 11 types of co-benefits, based on the Climate Change Committee’s Seve
 <!-- Explanation: This is a chart.... -->
 
 <Grid columns={2}>
-  <!-- <Cell annotation={perCapita}> -->
   <Cell>
 
   #### Distribution of the cobenefit per data zone compared to UK Average
@@ -79,7 +76,6 @@ We model 11 types of co-benefits, based on the Climate Change Committee’s Seve
     yData="count"
     fillData="sex"
   />
-    <!-- titleData="Distribution of data zones (Normalized)" -->
 
   #### 11 types of co-benefit values (vs. UK Average)
 
@@ -103,7 +99,7 @@ We model 11 types of co-benefits, based on the Climate Change Committee’s Seve
 
   *Scroll for zooming in and out
 
-  `<MapChart>`
+  `<MapChart />`
 
   </Cell>
 </Grid>
@@ -151,35 +147,74 @@ Detailed breakdown of temporal trends for total average co-benefits and types of
 
 We describe the distribution of household economic factors aggregated on the data zone level and the different level of co-benefits received by those data zones.
 
-<!-- <Grid columns={3}>
-</Grid> -->
-
-<!--     ## [EPC Band](/#)
-
-    Energy efficiency rating for homes, from Band A (most efficient) to Band G (least efficient). -->
-
 <Cell>
-  <Grid columns={3} showGrid={false}>
-    <Cell>
+<Grid columns={3}>
+  <Cell hideCell={true}>
 
-    #### Comparing the Socio-Economic factors distributions of City of Edinburgh and UK, and their correlation with co-benefits.
+  #### Comparing the Socio-Economic factors distributions of City of Edinburgh and UK, and their correlation with co-benefits.
 
-<Widget
+  <Widget
   borderColour="#f0f0f0"
   backgroundColour="#f0f0f0"
-> 
+  > 
 
-**Legend:**
+  **Legend:**
 
-black = City of Edinburgh
+  black = City of Edinburgh
 
-grey = UK
+  grey = UK
 
-</Widget>
+  </Widget>
 
-    </Cell>
+  </Cell>
 
-    <Cell>
+  <Cell hideCell={true}>
+
+  <Widget
+    borderColour="#f0f0f0"
+    backgroundColour="#f0f0f0"
+  >
+
+  **Interpreting the charts:**
+
+  **Barchart:** Each bar represents the normalized frequency of datazones linked to a given social economic factor value.
+
+  **Scatterplot:** Each dot represents a datazone inside City of Edinburgh. The cloud shows the distribution for UK.
+
+  </Widget>
+
+  </Cell>
+
+  <Cell hideCell={true}>
+
+  <Widget
+    borderColour="#f0f0f0"
+    backgroundColour="#f0f0f0"
+  >
+
+  **Correlation ≠ Causation:** The scatter plots represent modelled associations and should not be interpreted as direct causal relationships.
+    
+  **Discrete scales:** The first set of socio-economic factors are using categorical values where the x-axis is non-linear: EPC, Tenure, Typology, Fuel type, Gas flag, Number of cars.
+
+  </Widget>
+    
+  </Cell>
+</Grid>
+</Cell>
+
+<br>
+
+<Cell>
+  <Grid columns={2} showGrid={false}>
+
+  ## [EPC Band](/#)
+
+  Energy efficiency rating for homes, from Band A (most efficient) to Band G (least efficient).
+
+    <Widget
+      borderColour="#f0f0f0"
+      backgroundColour="#ffffff"
+    >
 
     #### Data zones distribution (vs. UK average)
 
@@ -193,9 +228,12 @@ grey = UK
     groupBy="state"
   />
 
-    </Cell>
+    </Widget>
 
-    <Cell>
+    <Widget
+      borderColour="#f0f0f0"
+      backgroundColour="#ffffff"
+    >
 
     #### Co-benefits received by data zones across EPC Band values
 
@@ -208,26 +246,16 @@ grey = UK
       fillColour={noiseCBColour}
     />
 
-    </Cell>
+    </Widget>
 
-    <Cell>
+  ## [Tenure](/#)
+  
+  Relationship of occupant to the dwelling's ownership.
 
     <Widget
-  borderColour="#f0f0f0"
-  backgroundColour="#f0f0f0"
->
-
-**Interpreting the charts:**
-
-**Barchart:** Each bar represents the normalized frequency of datazones linked to a given social economic factor value.
-
-**Scatterplot:** Each dot represents a datazone inside City of Edinburgh. The cloud shows the distribution for UK.
-
-</Widget>
-
-    </Cell>
-
-    <Cell>
+      borderColour="#f0f0f0"
+      backgroundColour="#ffffff"
+    >
 
     #### Data zonesData zones are standard statitical geographies in UK that comprise between 400 and 1200 households. distribution (vs. UK average)
 
@@ -241,9 +269,12 @@ grey = UK
     groupBy="state"
   />
 
-    </Cell>
+    </Widget>
 
-    <Cell>
+    <Widget
+      borderColour="#f0f0f0"
+      backgroundColour="#ffffff"
+    >
 
     #### Co-benefits received by data zones across Tenure values
 
@@ -256,15 +287,7 @@ grey = UK
       fillColour={noiseCBColour}
     />
 
-    </Cell>
-
-<Cell>
-
-> **Correlation ≠ Causation:** The scatter plots represent modelled associations and should not be interpreted as direct causal relationships.
->
-> **Discrete scales:** The first set of socio-economic factors are using categorical values where the x-axis is non-linear: EPC, Tenure, Typology, Fuel type, Gas flag, Number of cars.
-  
-</Cell>
+    </Widget>
 
     <Cell>
       ...
@@ -273,8 +296,6 @@ grey = UK
     <Cell>
       ...
     </Cell>
-
-    <Cell hideCell={true}></Cell>
 
     <Cell>
       ...
