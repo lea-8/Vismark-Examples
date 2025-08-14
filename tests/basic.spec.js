@@ -60,6 +60,35 @@ test.describe('components', () => {
         page.getByRole('heading', { name: 'Penguin culmen sizes by species' })
     ).toBeVisible();
   });
+
+  test('header', async ({ page }) => {
+    await expect(
+        page.getByRole('img', { name: 'Logo' })
+    ).toBeVisible();
+  });
+
+  test('footer', async ({ page }) => {
+    await expect(
+        page.getByRole('img', { name: 'ECCI' })
+    ).toBeVisible();
+  });
+
+  test('widget', async ({ page }) => {
+  await expect(
+        page.getByRole('img', { name: 'badge' })
+    ).toBeVisible();
+  });
+
+  // grid
+
+  // cell
+
+  // dropdown + image
+  // test('image', async ({ page }) => {
+  //   await expect(
+  //       page.getByRole('img', { name: 'images/derry_graph.png' })
+  //   ).toBeVisible();
+  // });
 });
 
 // Dynamic content check
