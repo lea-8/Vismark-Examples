@@ -19,7 +19,7 @@ Derry City and Strabane District Council face a challenge shared by local author
 By providing accessible, place and co-benefit specific data, the Atlas provides actionable information that demonstrates the connection between climate action and social and economic challenges facing Derry and Strabane. It shows that implementing net-zero actions like shifts to active travel would generate £165 million in health benefits, with air quality improvements of £110 million and reductions in noise pollution worth £134 million, valued through Green Book methodologies[^1].
 
 <AreaChart 
-  dataPath='/data/unemployment.csv'
+  dataPath='data/unemployment.csv'
   xData='date'
   yData='unemployed'
   fillData="industry"
