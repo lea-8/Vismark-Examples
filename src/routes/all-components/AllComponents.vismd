@@ -1,0 +1,148 @@
+<script>
+  import AreaChart from 'vismark/AreaChart';
+  import BarChart from 'vismark/BarChart';
+  import BoxPlot from 'vismark/BoxPlot';
+  import Histogram from 'vismark/Histogram';
+  import LineChart from 'vismark/LineChart';
+  import ScatterPlot from 'vismark/ScatterPlot';
+
+  import Header from 'vismark/Header';
+  import Footer from 'vismark/Footer';
+  import Grid from 'vismark/Grid';
+  import Cell from 'vismark/Cell';
+  import Widget from 'vismark/Widget';
+  import Image from 'vismark/Image';
+
+  import Dropdown from 'vismark/Dropdown';
+</script>
+
+# Manual checks for every single Vismark component
+
+## Header + Footer
+
+<Header />
+
+<Footer />
+
+## A Widget with a badge and an image within a dropdown
+
+<Widget
+  borderColour="#000000"
+  backgroundColour="#f0f0f0"
+  badgeType="relativeCB"
+>
+
+  <Dropdown
+    shownText="Reveal image below"
+  >
+
+    <Image 
+      path="images/derry_graph.png"
+      scale="75%"
+    />
+    
+  </Dropdown>
+
+</Widget>
+
+## Every chart within a grid
+
+<Grid
+  columns={3}
+  showGrid={true}
+>
+
+  <Cell>
+    
+  <AreaChart 
+    dataPath='/data/unemployment.csv'
+    xData='date'
+    yData='unemployed'
+    fillData="industry"
+    titleData="Unemployment over time by industry"
+  />
+
+  </Cell>
+
+  <Cell>
+    
+  <BarChart 
+    dataPath="data/population-state-age.csv" 
+    xData="key"
+    yData="population"
+    fillData="key"
+    groupBy="state"
+    titleData="Population age for 6 US states"
+  />
+
+  </Cell>
+
+  <Cell>
+    
+  <BoxPlot 
+    dataPath="data/morley.csv"
+    xData="Expt"
+    yData="Speed"
+    fillColour="#4269d0"
+    titleData="Speed of Light - Morley Experiment" 
+  />
+
+  </Cell>
+
+  <Cell>
+  
+  <Histogram 
+    dataPath="data/olympians.csv" 
+    xData="weight"
+    yData="count"
+    fillData="sex"
+    titleData="Olympic athletes by weight"
+  />
+
+  </Cell>
+
+  <Cell>
+  
+  <LineChart 
+    dataPath="data/unemployment.csv"
+    xData="date"
+    yData="unemployed"
+    fillData="industry"
+    titleData="Unemployment by industry over time"
+  />
+
+  </Cell>
+
+  <Cell>
+    
+  <ScatterPlot 
+    dataPath="data/penguins.csv"
+    xData="culmen_length_mm"
+    yData="culmen_depth_mm"
+    fillData="species"
+    titleData="Penguin culmen sizes by species"
+  />
+
+  </Cell>
+
+</Grid>
+
+## Hide some cells
+
+<Grid
+  columns={3}
+>
+
+  <Cell
+    hideCell={true}
+  >
+
+  </Cell>
+
+  <Cell>
+
+  Something else
+  
+  </Cell>
+
+</Grid>

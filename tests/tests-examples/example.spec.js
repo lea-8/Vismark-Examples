@@ -1,24 +1,4 @@
 // @ts-check
-import { test, expect } from '@playwright/test';
-
-test('Render page: data story Derry', async ({page}) => {
-  await page.goto('./data-story');
-
-  await expect(page.getByRole('heading', {name: 'The Impact of Co-Benefits'})).toBeVisible();
-});
-
-test('Render page: LAD Edinburgh', async ({page}) => {
-  await page.goto('./lad');
-
-  await expect(page.getByText('City of Edinburgh', {exact: true})).toBeVisible();
-});
-
-test('Render page: Co-benefit air quality', async ({page}) => {
-  await page.goto('./cobenefit');
-
-  await expect(page.getByText('Air quality improvements', {exact: true})).toBeVisible();
-});
-
 
 // ----- ----- ----- ----- //
 // Example tests below     //

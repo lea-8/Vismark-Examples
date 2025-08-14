@@ -1,1 +1,69 @@
-// Do more tests on all the plots!
+import { test, expect } from '@playwright/test';
+
+test('Render page: data story Derry', async ({page}) => {
+  await page.goto('./data-story');
+
+  await expect(page.getByRole('heading', {name: 'The Impact of Co-Benefits'})).toBeVisible();
+});
+
+test('Render page: LAD Edinburgh', async ({page}) => {
+  await page.goto('./lad');
+
+  await expect(page.getByText('City of Edinburgh', {exact: true})).toBeVisible();
+});
+
+test('Render page: Co-benefit air quality', async ({page}) => {
+  await page.goto('./cobenefit');
+
+  await expect(page.getByText('Air quality improvements', {exact: true})).toBeVisible();
+});
+
+// Perform checks on all components
+test.describe('components', () => {
+  test.beforeEach(async ({ page }) => {
+    // Go to the starting url before each test.
+    await page.goto('./all-components');
+  });
+
+  test('area chart', async ({ page }) => {
+    await expect(
+        page.getByRole('heading', { name: 'Unemployment over time by industry' })
+    ).toBeVisible();
+  });
+
+  test('bar chart', async ({ page }) => {
+    await expect(
+        page.getByRole('heading', { name: 'Population age for 6 US states' })
+    ).toBeVisible();
+  });
+
+  test('box plot', async ({ page }) => {
+    await expect(
+        page.getByRole('heading', { name: 'Speed of Light - Morley Experiment' })
+    ).toBeVisible();
+  });
+
+  test('histogram', async ({ page }) => {
+    await expect(
+        page.getByRole('heading', { name: 'Olympic athletes by weight' })
+    ).toBeVisible();
+  });
+
+  test('line chart', async ({ page }) => {
+    await expect(
+        page.getByRole('heading', { name: 'Unemployment by industry over time' })
+    ).toBeVisible();
+  });
+
+  test('scatter plot', async ({ page }) => {
+    await expect(
+        page.getByRole('heading', { name: 'Penguin culmen sizes by species' })
+    ).toBeVisible();
+  });
+});
+
+// Dynamic content check
+
+// Performance check
+
+// Error pages
