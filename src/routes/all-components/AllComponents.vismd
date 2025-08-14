@@ -146,3 +146,23 @@
   </Cell>
 
 </Grid>
+
+*For testing purposes:*
+<Image 
+  path="images/derry_graph.png"
+  scale="60%"
+/>
+
+## Maths and footnotes
+
+```math
+E = mc^2
+```
+
+$$
+\pi r^2
+$$
+
+Here's text[^1].
+
+[^1]: Here's a tiny footnote
