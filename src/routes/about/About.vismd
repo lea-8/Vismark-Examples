@@ -1,3 +1,16 @@
+---
+title: About
+author: L A
+
+---
+
+<script>
+  import Header from 'vismark/Header';
+  import Footer from 'vismark/Footer';
+</script>
+
+<Header />
+
 # About the UK Co-Benefit Atlas
 
 ### Read the short paper: [here](https://ukcobenefitsatlas.net/The_UK_Co_Benefits_Atlas___Poster_Summary.pdf)
@@ -17,3 +30,52 @@ For 46,000 communities and regions across the UK, calculations consider localise
 Explore this data atlas to further understand connections between a wide range of social, economic and environmental priorities and drive more effective decision-making.
 
 Join our mailing list to receive updates on future features and events about the atlas: https://groups.google.com/g/ukcobenefitsatlas
+
+### Atlas citation
+*Phillips, S; Wang, J; Pister, A; Higgins-Lavery, R; Bissett, S; Wharmby, C; Field, S; Hinrichs, U; Sudmant, A; Bach, B (2025). “The UK Co-Benefits Atlas: An Interactive Visualisation Atlas to Understand the Impacts of Achieving Climate Action Targets”. Published June 25, 2025.*
+
+The atlas received funding from Scotland Beyond Net Zero (https://scotland-beyond-net-zero.ac.uk).
+
+## What are Co-Benefits?
+Current research from the Edinburgh Climate Change Institute (ECCI), using a model developed for the UK Climate Change Committee (CCC), finds that for every 1£ spent on climate change mitigation in the UK there are as much as 14£ of social benefits in the form of improved public health, better urban connectivity, and increased productivity.
+
+The ECCI modelling team provides 11 co-benefits for >1000 possible climate interventions in ~46,000 UK 'datazones' (lower-layer super output areas, LSOAs) across the UK. The UKCBA continues to co-create this interactive and increasingly data-rich and engaging visualization atlas with its stakeholders; for this project we already have strong commitment from Scottish partners across academia, business, and the public sector (see below), stating the need of such an atlas and which are highly invested in supporting the project through attending workshops and helping with its co-design. The end result will be a collaboratively created, cutting-edge, and first-of-its-kind platform capable of facilitating interdisciplinary and cross-sectoral collaborations and decision making between diverse stakeholders around the complex socio-economic benefits of climate interventions.
+
+### Co-benefits citation
+*Sudmant, A., Boyle, D., Higgins‐Lavery, R., Gouldson, A., Boyle, A., Fulker, J., & Brogan, J. (2024). Climate policy as social policy? A comprehensive assessment of the economic impact of climate action in the UK. Journal of Environmental Studies and Sciences, 1-15.*
+
+## Who are the target audiences?
+Accurately capturing and communicating the benefits of place-based interventions is a key stumbling block of climate change policies in Scotland. Common framings around "fiscal spend" and limited pathways for economic returns, miss the broader economic value that net zero interventions can generate. With the open data and analyses published through our atlas, we aim to inform decision making made by:
+
+* Businesses seeking commercial net zero opportunities.
+* Communities and policy makers with net zero mandates.
+* Researchers and analysts examining the socio-economic co-benefits of net zero interventions.
+
+## What's a Visualization Atlas?
+Visualization atlases are online platforms making large and complex data sets accessible and understandable to wide audiences. To that end, they employ interactive visualizations and explanations. This project has been inspired by existing visualization atlases on, e.g., Sustainable Development Goals, the economic complexity of Our World in Data. Read more about the concept of visualization atlases and their key characteristics:
+
+* TOPICS: Visualization atlases present complex topics, targeting a wide range of audiences. Topics are complex, data-driven and comprehensive.
+* CURATION—Visualization atlases are highly curated in terms of content, data and presentation; they are scoped, structured, and visually curated.
+* VISUALIZATION: Visualization atlases heavily rely on data visualization; they are visualization-driven, explanatory and exploratory.
+
+### Visualization Atlases citation
+*Wang, J., Shu X., Bach B., Hinrichs U., (2024). Visualization Atlases: Explaining and Exploring Complex Topics through Data, Visualization, and Narration. Transactions on Visualization and Computer Graphics.*
+
+## Who's involved in this project?
+### The co-benefits modeling team
+* [Andrew Sudmant](https://edinburghcentre.org/team/andrew-sudmant), *University of Edinburgh*
+* [Ruaidhri Higgins-Lavery](https://edinburghcentre.org/team/ruaidhri-higgins-lavery), *University of Edinburgh*
+* [Sarah Bissett](https://www.climateintelligenceservice.scot/about-us/meet-the-team), *University of Edinburgh*
+* [Sean Field](https://energyethics.st-andrews.ac.uk/people/sean-field/), *University of St Andrews*
+* [Clare Wharmby](https://edinburghcentre.org/team/clare-wharmby), *University of Edinburgh*
+
+### The visualization team
+The visualization team comprises researchers from the [VisHub research](https://vishub.net/) group at the School of Informatics, University of Edinburgh.
+
+* [Benjamin Bach](https://benjbach.github.io/), *Inria Bordeaux & University of Edinburgh*
+* [Jinrui Wang](https://www.jinruiw.com/), *University of Edinburgh*
+* [Alexis Pister](https://alexispister.github.io/), *University of Edinburgh*
+* Sian Phillips, *University of Edinburgh*
+* [Uta Hinrichs](utahinrichs), *University of Edinburgh*
+
+<Footer />
