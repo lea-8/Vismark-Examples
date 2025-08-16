@@ -1,0 +1,79 @@
+---
+title: Methods
+author: L A
+
+---
+
+<script>
+  import BarChart from 'vismark/BarChart';
+
+  import Grid from 'vismark/Grid';
+  import Cell from 'vismark/Cell';
+  import Widget from 'vismark/Cell';
+  import Header from 'vismark/Header';
+  import Footer from 'vismark/Footer';
+  import Image from 'vismark/Image';
+</script>
+
+<Header />
+
+## UK Co-Benefits Atlas Methodology
+
+The CCC has outlined necessary low-carbon actions for the UK to reach net zero in its 7th Carbon Budget1. These national-level measures have been redistributed across localities based on each area’s specific characteristics like rurality, age, building types and travel patterns. The subsequent impact of these interventions have been modelled according to the place-based methodology of each of the 11 co-benefit types:
+
+* Air quality improvements
+* Noise reduction
+* Excess cold reduction
+* Excess heat reduction
+* Dampness reduction
+* Congestion impacts
+* Longer travel times
+* Road maintenance impacts
+* Road safety impacts
+* Physical activity increase
+* Dietary improvements
+
+Each of the above cobenefit types are modelled against a baseline trajectory for each local area, with the difference between the net-zero and baseline scenarios resulting in the projected co-benefit gains. The co-benefits are modelled and distributed to beneficiaries directly and indirectly, for example to individuals via improved quality of life, or to national bodies like the NHS or the Exchequer in the form of reduced spending requirements.
+
+Similar social impact modelling has previously been developed and utilised[^1] by local authorities and actors in compliance with UK Green Book methodologies. This analysis has built on previous projects developed for the CCC and in conjunction with PwC[^2] to quantify impacts on health and society from net-zero interventions.
+
+It uses reported data at the highest available resolution (data zones or LSOAs) across the UK to aggregate populations into archetypes based on social and economic characteristics. The interventions are modelled and distributed through these archetype groupings, while accounting for local variation by geographic area (congestion bands, population density, EPC ratings, etc.).
+
+The analysed co-benefits are not exhaustive, and projected estimates are therefore conservative. Due to scoping constraints and data limitations, the 11 co-benefit types were selected as being the most methodologically robust. They cover all central technologies in the CCC’s pathway to reach net-zero[^3] in the buildings and transport sector, as well as the impact on human health from shifts to low-carbon, plant-based diets. These interventions include:
+
+**Buildings Sector:**
+
+* Hybrid heat pump
+* Air source heat pump
+* Ground source heat pump
+* Floor insulation
+* Roof insulation
+* Solid wall insulation
+* Cavity wall insulation
+* Other insulation types
+* More efficient appliances
+
+**Transport:**
+
+* Reduction in transport demand
+* Shifts to low-carbon transport (public transport, electric vehicles, hybrid vehicles, active travel).
+
+**Dietary Change:**
+
+* Shifts to healthier diets (reductions in meat and dairy, replaced with plant-based foods)
+
+The CCC has outlined necessary low-carbon actions for the UK to reach net zero in its 7th Carbon Budget[^3]. These national-level measures have been redistributed across localities based on each area’s specific characteristics like rurality, age, building types and travel patterns. The subsequent impact of these interventions have been modelled according to the methodology of each specific cobenefit type below.
+
+<Image 
+  path="images/methods1.png"
+  scale="50%"
+/>
+
+Figure 1 – High-level social impact methodology for each small area
+
+<Image 
+  path="images/methods2.png"
+  scale="50%"
+/>
+
+Figure 2 – Cobenefit types and respective damage pathways using total UK outputs from CB7 analysis
