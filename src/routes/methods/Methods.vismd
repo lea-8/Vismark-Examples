@@ -5,14 +5,13 @@ author: L A
 ---
 
 <script>
-  import BarChart from 'vismark/BarChart';
-
   import Grid from 'vismark/Grid';
   import Cell from 'vismark/Cell';
   import Widget from 'vismark/Cell';
   import Header from 'vismark/Header';
   import Footer from 'vismark/Footer';
   import Image from 'vismark/Image';
+  import Dropdown from 'vismark/Dropdown';
 </script>
 
 <Header />
@@ -77,3 +76,77 @@ Figure 1 – High-level social impact methodology for each small area
 />
 
 Figure 2 – Cobenefit types and respective damage pathways using total UK outputs from CB7 analysis
+
+<Image 
+  path="images/methods3.png"
+  scale="50%"
+/>
+
+Figure 3 – LSOA/Datazone-level data for archetypal analysis
+
+<Dropdown shownText="Air Quality"> 
+
+The air quality co-benefit measures the reduction in air pollution, primarily as a result of decreased fossil fuel combustion, and quantifies the benefit to individuals and society.
+
+Air quality improvements are quantified by modelling the delta of energy consumption between the low-carbon intervention (e.g. heat pumps) and the counterfactual (e.g. gas boilers), before estimating the tonnes of pollutants mitigated by type. The reduction in pollutants (PM2.5, PM10, SO2, NOx) from fossil fuel combustion are valued according to UK Green Book valuations (developed by Ricardo4).
+
+These avoided damages are allocated according to beneficiary type (health/non-health, productivity, etc.), and distributed to households indirectly according to population density bands. The sum of air quality co-benefits from the buildings and transport sectors represent the total air quality co-benefit estimations.
+
+These benefits are discounted according to HM Treasury’s Green Book appraisal guidance for social (1.5% p.a.) and central discount rates (3.5%)5.
+
+Buildings – We first calculate the baseline emissions of damaging pollutants by multiplying the deployment of the counterfactual by fuel type (e.g. gas boilers, combi boilers, oil boilers (according to EPC data of the local area)) by energy usage per unit. We multiply the energy usage in kwh/mwh by factors developed by Ricardo1 according to fuel type to calculate tonnes of emitted pollutant. These estimates are multiplied by damage costs1 to calculate the total valuation of mitigated air pollution.
+
+> These avoided damages cover economic, social and environmental degradation, and are distributed to inhabitants specific to the area in question (improvements in life expectancy, improved health outcomes, etc.), or nationally where appropriate (NHS savings, productivity gains, etc.). Due to constraints in the literature, changes to indoor air quality were not modelled in this analysis.
+
+> The avoided damages (i.e. benefits) are measured annually, accounting for forecasted changes in population growth, fuel usages, and emissions intensities. All costs are discounted through to 2050.
+
+```math
+\sum \text{Fuel Use (Change in Energy Consumption (GWh) } \times \text{ Particulate Emissions Factors)}
+\\
+\times \text{ Air Quality Damage Cost by Pollutant Type}
+\\
+\times \text{ Share of Damages Attributable to Impact Pathway}
+\\
+\times \text{ Share of Impacts to Beneficiary}
+\\
+= \text{ Total Value of Avoided Damages (£)}
+```
+
+Transport – We model the baseline scenario for vehicles driven in a given area, based on per capita assumptions from national and regional travel patterns, estimating travel by vehicle type, road type, and fuel type67. This is multiplied by average fuel consumption by vehicle type and per kilometre travelled, which is then multiplied by air pollutant emissions factors to estimate total emitted pollutants (PM2.5, SO2, NOx) from travel in an area from tailpipe emissions. Non-exhaust emissions (PM2.5) from wear on tyres, brakes and roads are estimated from distance travelled, using emissions factors from the Air Quality Expert Group8. Damage factors are applied on a per-tonne of pollutant basis, according to pollutant type and rurality bands.
+
+> The same process is repeated for the low-carbon interventions; changing the vehicle type and fuel type, modifying distance travelled per capita where applicable, and summing total tailpipe and non-tailpipe pollutants.
+
+> The total value of avoided air pollution is the delta of the two scenarios, calculated annually through to 2050 and discounted accordingly.
+
+```math
+\Big(
+(\text{Electricity Consumption by EVs} \times \text{ Particulate Emissions Factors})
++ (\text{Fuel Consumption by ICE vehicles} \times \text{ Particulate Emissions Factors})
+\Big) \times \text{ Unit Conversions}
+\\
++ (\text{Particulate Emissions from (Brake Wear, Tyre Wear, Road Wear)})
+\\
+\times \text{ Change in distance by mode (vkm)}
+\\
+\times \text{ Share of vkm travelled by rural-urban classification}
+\\
+\times \text{ Air Quality Damage Costs}
+\\
+\times \text{ Share of Damages Attributable to Impact Pathway}
+\\
+\times \text{ Share of Impacts to Beneficiary}
+\\
+= \text{ Total Value of Avoided Damages (£)}
+```
+
+</Dropdown>
+
+<Dropdown shownText="Excess Cold">
+
+</Dropdown>
+
+[^1]: [https://www.theccc.org.uk/publication/the-seventh-carbon-budget/](https://www.theccc.org.uk/publication/the-seventh-carbon-budget/)
+[^2]: [https://www.lse.ac.uk/granthaminstitute/publication/financing-uk-place-based-climate-action-from-westminster-to-cumberland/](https://www.lse.ac.uk/granthaminstitute/publication/financing-uk-place-based-climate-action-from-westminster-to-cumberland/)
+[^3]: [https://www.gov.uk/government/publications/the-green-book-appraisal-and-evaluation-in-central-government/the-green-book-2020](https://www.gov.uk/government/publications/the-green-book-appraisal-and-evaluation-in-central-government/the-green-book-2020)
+
+<Footer />
