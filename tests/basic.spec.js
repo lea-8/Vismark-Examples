@@ -87,7 +87,7 @@ test.describe('components', () => {
 
   test('image', async ({ page }) => {
     await expect(
-      page.getByRole('img', { name: 'images/derry_graph.png' })
-    ).toBeVisible();
+      page.getByRole('img', { name: 'images/derry_main_graph.png' })
+    ).toHaveScreenshot('derry_main_graph.png');
   });
 });

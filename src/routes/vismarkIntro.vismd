@@ -10,13 +10,15 @@ Some example pages can be found below:
 
 1. [Derry data story](data-story)
 2. [City of Edinburgh LAD](lad)
-<!-- 3. [Air quality improvements](cobenefit) -->
 3. [Methods](methods)
-<!-- 5. [About](about) -->
-6. [A simple blog post](blog)
+4. [About](about)
+5. [A simple blog post](blog)
+<!-- 3. [Air quality improvements](cobenefit) -->
 
 ## Documentation
 For more details on installing and using this tool, please see the [Vismark Github page](https://github.com/lea-8/Vismark).
+
+All components rendered in the browser can be seen [on this page](all-components).
 
 <!-- ## Tutorial
 Have a look [here](tutorial) to get started. -->

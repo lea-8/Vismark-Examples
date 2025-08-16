@@ -37,7 +37,7 @@
   >
 
     <Image 
-      path="images/derry_graph.png"
+      path="images/derry_main_graph.png"
       scale="75%"
     />
     
@@ -149,7 +149,7 @@
 
 *For testing purposes:*
 <Image 
-  path="images/derry_graph.png"
+  path="images/derry_main_graph.png"
   scale="60%"
 />
 
