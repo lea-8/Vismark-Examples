@@ -5,10 +5,25 @@ author: L A
 ---
 
 <script>
-  import AreaChart from 'vismark/AreaChart';
+  import BarChart from 'vismark/BarChart';
+
+  import Grid from 'vismark/Grid';
+  import Cell from 'vismark/Cell';
+  import Widget from 'vismark/Cell';
+  import Header from 'vismark/Header';
+  import Footer from 'vismark/Footer';
+  import Image from 'vismark/Image';
 </script>
 
-# The Impact of Co-Benefits
+<Header />
+
+<Widget
+  borderColour="white"
+>
+
+# Case Study: The Impact of Co-Benefits
+
+</Widget>
 
 ## Accelerating climate financing in Derry City and Strabane District Council
 
@@ -18,14 +33,31 @@ Derry City and Strabane District Council face a challenge shared by local author
 
 By providing accessible, place and co-benefit specific data, the Atlas provides actionable information that demonstrates the connection between climate action and social and economic challenges facing Derry and Strabane. It shows that implementing net-zero actions like shifts to active travel would generate £165 million in health benefits, with air quality improvements of £110 million and reductions in noise pollution worth £134 million, valued through Green Book methodologies[^1].
 
-<AreaChart 
-  dataPath='data/unemployment.csv'
-  xData='date'
-  yData='unemployed'
-  fillData="industry"
-/>
+<Grid
+  columns={2}
+>
 
-<!-- ![Derry Co-benetifs](/images/image.png) -->
+  <Cell>
+
+  ### 11 types of co-benefit values (vs. UK Average)
+
+  Co-benefit values for Derry City and Strabane compared to average value of benefits received across all local authorities in UK (grey).
+
+  <Image 
+    path="images/derry_bar.png"
+  />
+
+  </Cell>
+
+  <Cell>
+
+  <Image 
+    path="images/derry_main_graph.png"
+  />
+
+  </Cell>
+
+</Grid>
 
 Per household, these values equal an average of ~£2,500 across all co-benefit types over the period 2025 – 2050 and are directly attributable to individuals as well as bodies like the NHS. These values can be used for accelerating investment in public health and help to address societal challenges present in Derry City and Strabane, such as high levels of deprivation and poor health[^2].
 
@@ -34,3 +66,5 @@ Cathy Burns, the Council’s Climate and Biodiversity Lead, says *“The UK Co-B
 
 [^1]: [https://www.gov.uk/government/publications/the-green-book-appraisal-and-evaluation-in-central-government/the-green-book-2020](https://www.gov.uk/government/publications/the-green-book-appraisal-and-evaluation-in-central-government/the-green-book-2020)
 [^2]: Sudmant, A., Boyle, D., Higgins‐Lavery, R. et al. Climate policy as social policy? A comprehensive assessment of the economic impact of climate action in the UK. J Environ Stud Sci (2024). [https://doi.org/10.1007/s13412-024-00955-9](https://doi.org/10.1007/s13412-024-00955-9)
+
+<Footer />
