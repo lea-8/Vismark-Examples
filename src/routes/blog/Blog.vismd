@@ -1,5 +1,8 @@
 <script>
   import Image from 'vismark/Image';
+  import Grid from 'vismark/Grid';
+  import Cell from 'vismark/Cell';
+  import Widget from 'vismark/Widget';
 </script>
 
 **FUTURE PLANET** | FOREST
@@ -13,6 +16,8 @@
 />
 
 *By Jocelyn Timperley* [<Image path="images/twitter_icon.png" scale="2%" />](https://x.com/) 1st December 2024
+
+Originally published in [BBC Future](https://www.bbc.co.uk/future/article/20221213-why-christmas-trees-may-be-good-for-the-environment).
 
 ## The environmental pros and cons of Christmas trees go far beyond the climate impact of "real or plastic", scientists say. So what's the best choice for a green Christmas?
 
@@ -57,3 +62,108 @@ Christmas trees are not included in the EU pledge to plant three billion additio
 However, research has shown that Christmas tree plantations can provide a boost to biodiversity – especially in areas where it has been declining as agriculture becomes more intensified. This is because the plantations tend to have open habitat structures rich in bare ground, which can allow higher accessibility to food resources, while their trees can provide farmland birds with decent nesting conditions. They also tend to be less intensively managed than much industrialised agriculture, which also helps with food availability, while their fences can keep out disruption from humans and dogs.
 
 "Species that would have used a more extensive form of farming landscape in the past, but don't find all the resources they need in the more intensified agricultural setting, will find what they want in the Christmas tree plantation," says Caplat.
+
+<Image path="images/bird.png" /> 
+
+*Studies have found Christmas tree plantations may offer refuges for declining farmland birds like yellowhammers in intensive agricultural areas (Credit: Andrew Howe/Getty Images)*
+
+---
+
+In a 2022 study in Germany, for example, researchers found Christmas tree plantations could represent important refuges for declining farmland birds such as yellowhammers and common linnets in intensive agricultural areas. The results chime with another 2018 study of Sauerland in Germany which found Christmas tree plantations are important strongholds for woodlarks.
+
+And a 2019 study in Belgium found that beetle diversity – including of threatened species – was higher in Christmas tree plantations than maize fields, although lower than in spruce plantations for timber, which are left to grow for longer and use less fertilisers and pesticides than Christmas trees.
+
+Meanwhile, in naturally forested areas of the north-east US, younger, open forests like Christmas tree plantations can provide higher concentration of insects or grasses to support birds and mammals in certain parts of their lifecycle, says Finton. "Especially if the Christmas tree farm is part of a much larger landscape or a mosaic of habitat types, including mature, larger, intact forests, I think there's a real ecological niche that it's fulfilling."
+
+More like this:
+* What would a green World Cup look like?
+* How climate change has altered Christmas
+* How Dickens made Christmas white
+
+Of course, Christmas trees are typically treated with plenty of pesticides and especially fertilisers to keep them aesthetically pleasing, says Caplat, which has its own impact on the environment. A study led by landscape ecologist Merle Streitberger from Osnabrück University in Germany found that organic Christmas tree plantations had improved habitat structure and plant species diversity compared to conventional ones, and recommended a reduction in herbicide in particular.
+
+Importantly, however, in some cases sites used to grow Christmas trees could be seeing far worse uses environmentally, says Caplat. Areas close to cities, for example, could find alternative uses as parking lots, he says. Kosiba similarly notes that in the rural areas of the northeastern US, where forests are often being lost to sprawling development, Christmas tree farms can give landowners an important diversified income. "It allows people to live in these places, manage and work in their land," she says.
+
+In short, if a landowner has an economically viable Christmas tree farm, they're incentivised to keep that land in "that natural, open state", says Finton. "That provides an incentive to keep that land open and not to, for instance, sell land to a situation that might end up in a strip mall or a subdivision or housing development."
+
+<Image path="images/kid_tree.png" /> 
+
+*For many people, Christmas trees can offer a rare opportunity to interact with nature, says Alexandra Kosiba (Credit: Ben Hasty/Getty Images)*
+
+---
+
+And then there is the carbon. Like any other tree, Christmas trees capture carbon as they grow. When they are cut down, they will begin to release that carbon. "There's a continuous process of growth and of taking carbon out of the atmosphere, which is a positive thing," says Kazer. However, as all the carbon absorbed by the tree will eventually be returned to the atmosphere as the tree dies, there is no overall removal of carbon, he adds.
+
+<Grid
+  columns={3}
+>
+
+<Cell hideCell={true}></Cell>
+
+<Widget
+  borderColour="white"
+>
+
+  **What is CO2e?**
+
+  CO2 equivalent, or CO2e, is the metric used to quantify the emissions from various greenhouse gases on the basis of their capacity to warm the atmosphere – their global warming potential.
+
+</Widget>
+
+<Cell hideCell={true}></Cell>
+
+</Grid>
+
+It’s also worth putting the amount of carbon involved in having a Christmas tree in context. The Carbon Trust estimates that a 2m-tall (6.6ft) Christmas tree burnt after use emits only 3.5kg carbon dioxide equivalent (CO2e) – roughly 0.2% of the emissions from a return flight from London to New York. A tree of the same size that ends up in landfill has a carbon footprint of 16kg of CO2e – equivalent to 1% of that return flight, or roughly two hamburgers.
+
+How people dispose of their Christmas trees after use is usually the single most important carbon consideration. The worst-case scenario happens when Christmas trees end up in landfill: the anaerobic conditions are conducive to the same carbon being released as methane – a greenhouse gas some 80 times more potent than carbon dioxide on a 20-year timescale. Whether or not a tree ends up in landfill has by far the largest impact on its carbon footprint: a tree that ends up in landfill emits some 4-5 times as much carbon as one that doesn’t, according to Carbon Trust figures.
+
+Ideally, if a tree is still alive with its roots, it will be replanted. A decent alternative is ensuring the tree's carbon is released slowly back to the atmosphere as CO2 – as happens if the tree is chipped and spread on a garden or park, or composted. If the tree is burned for energy, meanwhile, the carbon it contains will be emitted straight back to the atmosphere as CO2. It's also worth checking whether the place you bought the tree from offers recycling services, allowing it to be chipped and returned to the fields where it grew.
+
+Whole trees can even be used as habitat restoration tools on riverbanks and along shorelines to prevent erosion. In Vermont, where old Christmas trees are used for everything from biomass burning for energy to goat food, "we're also seeing folks using them in stream restoration," says Kosiba. "They're great at catching dirt and debris, and creating little barriers and pools for fish: a lot of it is mimicking what a beaver would do."
+
+Aside from disposal, Christmas trees produce greenhouse gases through the fertilisers used to grow them, which are made using fossil fuels and produce nitrous oxide, another powerful greenhouse gas. Meanwhile, managing and harvesting the forests uses fuel, as does transporting the trees to their final location.
+
+<Image path="images/tree_plastic_chute.png" />
+
+*Even real trees often arrive in plastic netting, which could take centuries to break down in the environment (Credit: Julian Stratenschulte/DPA/AFP/Getty Images)*
+
+---
+
+There are some options that can avoid waste altogether, of course. Some businesses now offer Christmas tree rentals – allowing you to borrow a potted tree for a few weeks over Christmas. "It fits perfectly in the sustainability approach of reduce, reuse before recycle," says Caplat.
+
+<Grid
+  columns={3}
+>
+
+<Cell hideCell={true}></Cell>
+
+<Widget
+  borderColour="white"
+>
+
+  **Carbon Count**
+
+  *The emissions from travel it took to report this story were 0kg CO2. The digital emissions from this story are an estimated 1.2g to 3.6g CO2 per page view. ***Find out more about how we calculated this figure here.***
+
+</Widget>
+
+<Cell hideCell={true}></Cell>
+
+</Grid>
+
+For those with the space, another great option is to buy a pot-grown tree for Christmas then keep it in your garden till the following year – perhaps even planting it permanently once it gets too large. "It's hard to imagine a better solution," says Finton, who advises getting a local species that will thrive in the area you live in, and making sure to keep it well watered when inside.
+
+And then, of course, there is the question of whether simply to opt for an artificial tree. These take hundreds of years to break down in landfill, but could be lower carbon overall than buying multiple real trees if reused for long enough. The Carbon Trust estimates the carbon footprint of plastic Christmas trees at around seven to 20 times that of real tree, depending on a range of factors such as whether the real tree went to landfill or how far people travelled to pick it up. If you have an artificial tree, the key is to reuse it for as many years as possible, says Kazar.
+
+"It takes a lot of effort to make [and transport] those trees," says Kazer. "And at the moment, they're quite hard things to recycle, because they're quite complicated."
+
+> ### *It's a drop in the ocean, but like any drop, it can be very useful as a model of how to approach things – Paul Caplat*
+
+So while Christmas trees may not be the environmental bane of the festive period, and could even provide some ecological benefits, we can still vastly improve their management.
+
+We can reduce or eliminate the fertilisers and pesticides used to grow them (including by accepting "wonkier" trees), and ensure forests are certified by schemes such as the Forest Stewardship Council, which verifies sustainable sourcing of forest products.
+
+We can also try to grow them near to cities, in places where the alternative options for that land use are worse, and consider using pot-grown trees instead of cut trees, then planting them permanently. We can prioritise buying local trees to reduce travel emissions, and we can definitely aim to ensure that no Christmas trees end up in landfill.
+
+"It's a drop in the ocean, but like any drop, it can be very useful as a model of how to approach things," says Caplat. "[Christmas trees] reach out in the areas of the climate change and biodiversity crisis, cost, welfare, affordability and everything basically. Because it's something that pretty much everyone wants."
