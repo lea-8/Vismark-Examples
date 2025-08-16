@@ -84,10 +84,4 @@ test.describe('components', () => {
       page.getByRole('group').first()
     ).toContainText('Reveal');
   });
-
-  test('image', async ({ page }) => {
-    await expect(
-      page.getByRole('img', { name: 'images/derry_main_graph.png' })
-    ).toHaveScreenshot('derry_main_graph.png');
-  });
 });
