@@ -211,67 +211,95 @@ Figure 3 – LSOA/Datazone-level data for archetypal analysis
   </Dropdown>
 </Widget>
 
-<Dropdown shownText="Physical Activity">
+<Widget
+  borderColour="rgba(210,210,210,255)"
+  backgroundColour="rgba(253,253,253,255)"
+>
+  <Dropdown shownText="Physical Activity">
 
-Increased physical activity co-benefit represents the health benefits gained through increased levels of exercise, resulting from a shift to active travel journeys from car trips.
+  Increased physical activity co-benefit represents the health benefits gained through increased levels of exercise, resulting from a shift to active travel journeys from car trips.
 
-Physical inactivity is associated with 1in 6 deaths in the UK and costs £7.4 billion each year21. Physical activity levels vary by population subsets, with men, higher earners and younger age groups more likely to be physical active.22
+  Physical inactivity is associated with 1in 6 deaths in the UK and costs £7.4 billion each year[^21]. Physical activity levels vary by population subsets, with men, higher earners and younger age groups more likely to be physical active.[^22]
 
-Shifts away from carbon-intensive journeys form an important part of the UK’s journey to net-zero, with varying shifts to active travel journeys projected across the UK. The increased levels of exercise, relative to baseline activity levels, will result in health improvements from the reduced risk of all-cause mortality, including cardiovascular disease and type 2 diabetes.
+  Shifts away from carbon-intensive journeys form an important part of the UK’s journey to net-zero, with varying shifts to active travel journeys projected across the UK. The increased levels of exercise, relative to baseline activity levels, will result in health improvements from the reduced risk of all-cause mortality, including cardiovascular disease and type 2 diabetes.
 
-Shifts from the CCC’s Seventh Carbon Budget are reallocated across the UK according to rurality bands and current travel patterns, with the greater shifts occurring in urban areas in line with CCC guidance and current travel patterns disaggregated by rurality and road types by the National Travel Survey (NTS)23. Total UK-level shifts by mode were reallocated on a per-capita basis based on these assumptions.
+  Shifts from the CCC’s Seventh Carbon Budget are reallocated across the UK according to rurality bands and current travel patterns, with the greater shifts occurring in urban areas in line with CCC guidance and current travel patterns disaggregated by rurality and road types by the National Travel Survey (NTS)[^23]. Total UK-level shifts by mode were reallocated on a per-capita basis based on these assumptions.
 
-The World Health Organisation’s (WHO) Health and Economic Assessment Tool (HEAT)24 methodology is utilised to estimate the reduced risk of all-cause mortality resulting from the increased levels of physical activity. In conjunction with place-specific data on age and sex, it is also used to predict increases in life expectancy, qualified through the UK Green Book’s Value of a Life Year (VOLY), and discounted according to health discount rates in the guidance (1.5%). Benefits are allocated directly to the individuals undertaking the behavioural change. We do not currently include estimates on the benefits on mental health or the NHS.
+  The World Health Organisation’s (WHO) Health and Economic Assessment Tool (HEAT)[^24] methodology is utilised to estimate the reduced risk of all-cause mortality resulting from the increased levels of physical activity. In conjunction with place-specific data on age and sex, it is also used to predict increases in life expectancy, qualified through the UK Green Book’s Value of a Life Year (VOLY), and discounted according to health discount rates in the guidance (1.5%). Benefits are allocated directly to the individuals undertaking the behavioural change. We do not currently include estimates on the benefits on mental health or the NHS.
+  
+  <Image 
+    path="images/phys-act.png"
+    scale="50%"
+  />
 
-```math
-```
+  </Dropdown>
+</Widget>
 
-</Dropdown>
+<Widget
+  borderColour="rgba(210,210,210,255)"
+  backgroundColour="rgba(253,253,253,255)"
+>
+  <Dropdown shownText="Congestion">
 
-<Dropdown shownText="Congestion">
+  Congestion occurs when demand for road usage exceeds capacity, characterised by decreased vehicular speeds and therefore longer journey times.
 
-Congestion occurs when demand for road usage exceeds capacity, characterised by decreased vehicular speeds and therefore longer journey times.
+  Low-carbon interventions, such as switches to active travel, buses and reduced demand for driving can result in greater time available to individuals to spend on work or leisure. Conversely, low-carbon interventions can also increase road usage, such as switches to EVs, due to ‘comfort-taking’ or ‘rebound effects,’ as a result of cheaper journey costs[^25].
 
-Low-carbon interventions, such as switches to active travel, buses and reduced demand for driving can result in greater time available to individuals to spend on work or leisure. Conversely, low-carbon interventions can also increase road usage, such as switches to EVs, due to ‘comfort-taking’ or ‘rebound effects,’ as a result of cheaper journey costs25.
+  We model the baseline scenario for vehicles driven in a given area, based on per capita assumptions from national and regional travel patterns, estimating travel by vehicle type, road type, and fuel type[^26]. Applying the CCC’s projections for modal shifts, vehicle type usage and subsequent rebound effects to current travel patterns disaggregated by regions, ruralities and archetypes, we can model the difference between time spent driving across the baseline and net-zero scenario.
 
-We model the baseline scenario for vehicles driven in a given area, based on per capita assumptions from national and regional travel patterns, estimating travel by vehicle type, road type, and fuel type26. Applying the CCC’s projections for modal shifts, vehicle type usage and subsequent rebound effects to current travel patterns disaggregated by regions, ruralities and archetypes, we can model the difference between time spent driving across the baseline and net-zero scenario.
+  These increases or decreases in time spent travelling are valued according to the DfT’s WebTAG Marginal External Cost (MEC) valuations[^27], and distributed directly to the individuals undertaking the journeys as well as indirect impacts to society.
 
-These increases or decreases in time spent travelling are valued according to the DfT’s WebTAG Marginal External Cost (MEC) valuations27, and distributed directly to the individuals undertaking the journeys as well as indirect impacts to society.
+  <Image 
+    path="images/congestion1.png"
+    scale="50%"
+  />
 
-```math
-```
+  </Dropdown>
+</Widget>
 
-</Dropdown>
+<Widget
+  borderColour="rgba(210,210,210,255)"
+  backgroundColour="rgba(253,253,253,255)"
+>
+  <Dropdown shownText="Excess Heat">
 
-<Dropdown shownText="Excess Heat">
+  Excess heat co-benefit represents the avoided costs of poor health and NHS costs resulting from individuals living in homes with dangerously high internal temperatures.
 
-Excess heat co-benefit represents the avoided costs of poor health and NHS costs resulting from individuals living in homes with dangerously high internal temperatures.
+  A building physics model is used to estimate internal temperature before and after installation of the low-carbon intervention, based on the household’s physical properties and characteristics. Buildings with temperatures above the excess heat threshold (21ο Celsius) are then mapped to damage costs developed by BRE[^15][^16] to estimate improvements in health, quality of life, and NHS savings, with seasonal variations in temperature accounted for.
 
-A building physics model is used to estimate internal temperature before and after installation of the low-carbon intervention, based on the household’s physical properties and characteristics. Buildings with temperatures above the excess heat threshold (21ο Celsius) are then mapped to damage costs developed by BRE1516 to estimate improvements in health, quality of life, and NHS savings, with seasonal variations in temperature accounted for.
+  Damages are more heavily weighted at the higher end of the temperature spectrum, using a sigmoidal function (i.e. the most severe health outcomes originate from the highest-temperature households). The savings are also adjusted based on the likelihood of vulnerable occupants within each household, using Frontier Economics Distributional Model[^17].
 
-Damages are more heavily weighted at the higher end of the temperature spectrum, using a sigmoidal function (i.e. the most severe health outcomes originate from the highest-temperature households). The savings are also adjusted based on the likelihood of vulnerable occupants within each household, using Frontier Economics Distributional Model17.
+  Quality of life and health improvements are distributed directly to the household implementing the low-carbon measure, with economy and NHS savings attributed indirectly to society.
 
-Quality of life and health improvements are distributed directly to the household implementing the low-carbon measure, with economy and NHS savings attributed indirectly to society.
+  <Image 
+    path="images/excess-heat.png"
+    scale="50%"
+  />
 
-```math
-```
+  </Dropdown>
+</Widget>
 
-</Dropdown>
+<Widget
+  borderColour="rgba(210,210,210,255)"
+  backgroundColour="rgba(253,253,253,255)"
+>
+  <Dropdown shownText="Dietary Change">
 
-<Dropdown shownText="Dietary Change">
+  Dietary change co-benefit models the impact on health from individuals shifting from meat and dairy consumption to more plant-based diets.
 
-Dietary change co-benefit models the impact on health from individuals shifting from meat and dairy consumption to more plant-based diets.
+  Shifts away from carbon-intensive food types, namely meat and dairy products, to plant-based foods are associated with carbon reductions as well as lower incidence of disease[^34].
 
-Shifts away from carbon-intensive food types, namely meat and dairy products, to plant-based foods are associated with carbon reductions as well as lower incidence of disease34.
+  Following the CCC’s recommendation on reductions in meat and dairy consumption, propensity for behavioural shifts are modelled using National Diet and Nutrition Surveys (NDNS)[^35], by splitting population groups per locality by age and sex. Estimates from a Global Burden of Disease study[^36] quantify the impact on mortality from dietary shifts, through reductions in the relative risk (RR) of developing colon and rectum cancer, ischaemic heart disease and type 2 diabetes.
 
-Following the CCC’s recommendation on reductions in meat and dairy consumption, propensity for behavioural shifts are modelled using National Diet and Nutrition Surveys (NDNS)35, by splitting population groups per locality by age and sex. Estimates from a Global Burden of Disease study36 quantify the impact on mortality from dietary shifts, through reductions in the relative risk (RR) of developing colon and rectum cancer, ischaemic heart disease and type 2 diabetes.
+  The resulting change in life expectancy, varying by age and sex groupings[^37] is valued according to the UK Green Book’s VOLY. Benefits are distributed directly to individuals undertaking the dietary shift, with NHS and Exchequer savings unaccounted for due to scope constraints.
 
-The resulting change in life expectancy, varying by age and sex groupings37 is valued according to the UK Green Book’s VOLY. Benefits are distributed directly to individuals undertaking the dietary shift, with NHS and Exchequer savings unaccounted for due to scope constraints.
+  <Image 
+    path="images/diet-change.png"
+    scale="85%"
+  />
 
-```math
-```
-
-</Dropdown>
+  </Dropdown>
+</Widget>
 
 <Dropdown shownText="Longer travel times">
 
@@ -281,10 +309,12 @@ While low-carbon interventions can cause inconveniences across switching to EVs 
 
 Shifts to active travel typically entails longer journey times, relative to other modes of transport. We calculate the distance travelled across baseline and CB7 scenarios, including projected shifts to active travel based on regional travel patterns and rurality classifications, to estimate total time spent travelling across journey purposes (commute, leisure, etc.) and average speed travelled per mode per rurality classification. We then value the additional time spent travelling according to MEC valuations[^29]. The cost of additional time required is then allocated directly to the individual undertaking the behavioural shift.
 
-```math
-```
+  <Image 
+    path="images/longer-travel.png"
+    scale="50%"
+  />
 
-</Dropdown>
+  </Dropdown>
 
 <Dropdown shownText="Road Repairs">
 
@@ -342,6 +372,13 @@ The resultant net impacts of changes to road accidents are measured using the Df
 [^14]:
 [^15]:
 
+[^21]:
+[^22]:
+[^23]:
+[^24]:
+[^25]:
+[^26]:
+[^27]:
 [^28]: https://www.bi.team/wp-content/uploads/2023/01/How-to-build-a-Net-Zero-society_Jan-2023.pdf
 [^29]: https://www.gov.uk/guidance/transport-analysis-guidance-tag
 
