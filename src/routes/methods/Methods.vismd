@@ -301,13 +301,17 @@ Figure 3 – LSOA/Datazone-level data for archetypal analysis
   </Dropdown>
 </Widget>
 
-<Dropdown shownText="Longer travel times">
+<Widget
+  borderColour="rgba(210,210,210,255)"
+  backgroundColour="rgba(253,253,253,255)"
+>
+  <Dropdown shownText="Longer travel times">
 
-Longer travel times co-benefit type estimates the opportunity cost of switching to active travel modes, in terms of additional time spent and reluctance to change engrained behaviours. The perceived annoyance or effort required to engage in low-carbon activities represents a key barrier to public uptake[^28].
+  Longer travel times co-benefit type estimates the opportunity cost of switching to active travel modes, in terms of additional time spent and reluctance to change engrained behaviours. The perceived annoyance or effort required to engage in low-carbon activities represents a key barrier to public uptake[^28].
 
-While low-carbon interventions can cause inconveniences across switching to EVs or retrofitting homes, this analysis only quantifies the impact of switching to active travel journeys, due to scoping constraints and uncertainties around the utility of MECs for systemic changes.
+  While low-carbon interventions can cause inconveniences across switching to EVs or retrofitting homes, this analysis only quantifies the impact of switching to active travel journeys, due to scoping constraints and uncertainties around the utility of MECs for systemic changes.
 
-Shifts to active travel typically entails longer journey times, relative to other modes of transport. We calculate the distance travelled across baseline and CB7 scenarios, including projected shifts to active travel based on regional travel patterns and rurality classifications, to estimate total time spent travelling across journey purposes (commute, leisure, etc.) and average speed travelled per mode per rurality classification. We then value the additional time spent travelling according to MEC valuations[^29]. The cost of additional time required is then allocated directly to the individual undertaking the behavioural shift.
+  Shifts to active travel typically entails longer journey times, relative to other modes of transport. We calculate the distance travelled across baseline and CB7 scenarios, including projected shifts to active travel based on regional travel patterns and rurality classifications, to estimate total time spent travelling across journey purposes (commute, leisure, etc.) and average speed travelled per mode per rurality classification. We then value the additional time spent travelling according to MEC valuations[^29]. The cost of additional time required is then allocated directly to the individual undertaking the behavioural shift.
 
   <Image 
     path="images/longer-travel.png"
@@ -315,46 +319,60 @@ Shifts to active travel typically entails longer journey times, relative to othe
   />
 
   </Dropdown>
+</Widget>
 
-<Dropdown shownText="Road Repairs">
+<Widget
+  borderColour="rgba(210,210,210,255)"
+  backgroundColour="rgba(253,253,253,255)"
+>
+  <Dropdown shownText="Road Repairs">
 
-The road repairs co-benefit type estimates the impact of projected changes in road usage on road maintenance requirements.
+  The road repairs co-benefit type estimates the impact of projected changes in road usage on road maintenance requirements.
 
-Projected low-carbon actions in the transport sector will have an impact on current road maintenance requirements. Certain actions, like switches to EVs (which are heavier than ICE vehicles) can result in increased requirements for road repairs. Demand-reduction activities like switches to active travel result in reduced necessity for road maintenance. The projected impacts vary widely across road types, vehicle types and rurality classifications, and factors like vehicular speeds.
+  Projected low-carbon actions in the transport sector will have an impact on current road maintenance requirements. Certain actions, like switches to EVs (which are heavier than ICE vehicles) can result in increased requirements for road repairs. Demand-reduction activities like switches to active travel result in reduced necessity for road maintenance. The projected impacts vary widely across road types, vehicle types and rurality classifications, and factors like vehicular speeds.
 
-We model the baseline scenario for vehicles driven in a given area, based on per capita assumptions from national and regional travel patterns, estimating travel by vehicle type, road type, and fuel type30. Applying the CCC’s projections for modal shifts, vehicle type usage and subsequent rebound effects to current travel patterns disaggregated by regions, ruralities and archetypes, we can model difference in road usage across the baseline and net-zero scenario.
+  We model the baseline scenario for vehicles driven in a given area, based on per capita assumptions from national and regional travel patterns, estimating travel by vehicle type, road type, and fuel type[^30]. Applying the CCC’s projections for modal shifts, vehicle type usage and subsequent rebound effects to current travel patterns disaggregated by regions, ruralities and archetypes, we can model difference in road usage across the baseline and net-zero scenario.
 
-The resultant net impacts of changes to required road maintenance are measured using the DfT’s MEC valuations from the WebTAG databook, which provide valuations for avoided infrastructure damages. These valuations are multiplied by the kilometres travelled across the scenarios, which are disaggregated by road type, vehicle type and rurality band. The difference across scenarios provides the net impact on road repairs from increased or decreased travel per local area.
+  The resultant net impacts of changes to required road maintenance are measured using the DfT’s MEC valuations from the WebTAG databook, which provide valuations for avoided infrastructure damages. These valuations are multiplied by the kilometres travelled across the scenarios, which are disaggregated by road type, vehicle type and rurality band. The difference across scenarios provides the net impact on road repairs from increased or decreased travel per local area.
 
-```math
-```
+  <Image 
+    path="images/road-repairs.png"
+    scale="50%"
+  />
 
-</Dropdown>
+  </Dropdown>
+</Widget>
 
-<Dropdown shownText="Road Safety">
+<Widget
+  borderColour="rgba(210,210,210,255)"
+  backgroundColour="rgba(253,253,253,255)"
+>
+  <Dropdown shownText="Road Safety">
 
-The road safety co-benefit type estimates the impact of projected changes in road usage on traffic collisions.
+  The road safety co-benefit type estimates the impact of projected changes in road usage on traffic collisions.
 
-Low-carbon actions which result in reduced levels of traffic, consequently have a knock-on effect on the number of accidents which occur on UK roads. Alternately, increased road usage through the impact of ‘rebound effects’ can lead to an increase in traffic collisions.
+  Low-carbon actions which result in reduced levels of traffic, consequently have a knock-on effect on the number of accidents which occur on UK roads. Alternately, increased road usage through the impact of ‘rebound effects’ can lead to an increase in traffic collisions.
 
-We model the baseline scenario for vehicles driven in a given area, based on per capita assumptions from national and regional travel patterns, estimating travel by vehicle type, road type, and fuel type[^31]. Applying the CCC’s projections for modal shifts, vehicle type usage and subsequent rebound effects to current travel patterns disaggregated by regions[^32], ruralities and archetypes, we can model difference in road usage across the baseline and net-zero scenario.
+  We model the baseline scenario for vehicles driven in a given area, based on per capita assumptions from national and regional travel patterns, estimating travel by vehicle type, road type, and fuel type[^31]. Applying the CCC’s projections for modal shifts, vehicle type usage and subsequent rebound effects to current travel patterns disaggregated by regions[^32], ruralities and archetypes, we can model difference in road usage across the baseline and net-zero scenario.
 
-The resultant net impacts of changes to road accidents are measured using the DfT’s MEC valuations from the WebTAG databook. The MECs provide valuations for fatalities, injuries and damages from road accidents[^33]. These valuations are multiplied by the kilometres travelled across the scenarios, which are disaggregated by road type, vehicle type and rurality band. The difference across scenarios provides the net impact on road safety from increased or decreased car travel per local area.
+  The resultant net impacts of changes to road accidents are measured using the DfT’s MEC valuations from the WebTAG databook. The MECs provide valuations for fatalities, injuries and damages from road accidents[^33]. These valuations are multiplied by the kilometres travelled across the scenarios, which are disaggregated by road type, vehicle type and rurality band. The difference across scenarios provides the net impact on road safety from increased or decreased car travel per local area.
 
-```math
-\Big(
-\text{Distance travelled by vehicle type in CB7 scenario (vkm)}
-- \text{ Distance travelled by vehicle type in baseline scenario (vkm)}
-\Big)
-\\
-\times \text{ Share of distance travelled by road type, rurality, and vehicle type (\%)}
-\\
-\times \text{ Value of impact by road type, rurality, and vehicle type per distance travelled (£/km)}
-\\
-= \text{ Total impact from changes to road accidents relative to baseline scenario}
-```
+  ```math
+  \Big(
+  \text{Distance travelled by vehicle type in CB7 scenario (vkm)}
+  - \text{ Distance travelled by vehicle type in baseline scenario (vkm)}
+  \Big)
+  \\
+  \times \text{ Share of distance travelled by road type, rurality, and vehicle type (\%)}
+  \\
+  \times \text{ Value of impact by road type, rurality, and vehicle type per distance travelled (£/km)}
+  \\
+  = \text{ Total impact from changes to road accidents relative to baseline scenario}
+  ```
 
-</Dropdown>
+  </Dropdown>
+</Widget>
+
 
 [^1]: [https://www.theccc.org.uk/publication/the-seventh-carbon-budget/](https://www.theccc.org.uk/publication/the-seventh-carbon-budget/)
 [^2]: [https://www.lse.ac.uk/granthaminstitute/publication/financing-uk-place-based-climate-action-from-westminster-to-cumberland/](https://www.lse.ac.uk/granthaminstitute/publication/financing-uk-place-based-climate-action-from-westminster-to-cumberland/)
@@ -364,24 +382,26 @@ The resultant net impacts of changes to road accidents are measured using the Df
 [^6]: https://uk-air.defra.gov.uk/assets/documents/reports/cat09/2301090900_Damage_cost_update_2023_Final.pdf
 [^7]: https://www.gov.uk/government/collections/the-green-book-and-accompanying-guidance-and-documents
 [^8]: https://www.gov.uk/guidance/transport-analysis-guidance-tag
-[^9]:
-[^10]:
-[^11]:
-[^12]:
-[^13]:
-[^14]:
-[^15]:
+[^9]: https://www.eea.europa.eu/themes/air/air-pollution-sources-1/emep-eea-air-pollutant-emission-inventory-guidebook
+[^10]: https://uk-air.defra.gov.uk/assets/documents/reports/cat09/1907101151_20190709_Non_Exhaust_Emissions_typeset_Final.pdf 
+[^11]: https://www.brebookshop.com/details.jsp?id=327671
+[^12]: https://files.bregroup.com/research/BRE_Report_the_cost_of_poor_housing_2021.pdf
+[^13]: https://www.sciencedirect.com/science/article/pii/S0360132321009756
+[^14]: https://files.bregroup.com/research/BRE_Report_the_cost_of_poor_housing_2021.pdf
+[^15]: https://www.brebookshop.com/details.jsp?id=327671
+[^16]: https://files.bregroup.com/research/BRE_Report_the_cost_of_poor_housing_2021.pdf
+[^17]: https://www.theccc.org.uk/publication/the-net-zero-distributional-model-methodology-report/#:~:text=The%20CCC%20commissioned%20Frontier%20Economics,scenarios%20to%20deliver%20Net%20Zero
 
-[^21]:
-[^22]:
-[^23]:
-[^24]:
-[^25]:
-[^26]:
-[^27]:
+[^21]: https://www.gov.uk/government/publications/physical-activity-applying-all-our-health/physical-activity-applying-all-our-health
+[^22]: https://healthsurvey.hscic.gov.uk/media/1022/chpt-2_physical-activity-in-adults.pdf
+[^23]: https://www.gov.uk/government/collections/national-travel-survey-statistics
+[^24]: https://www.who.int/europe/tools-and-toolkits/health-economic-assessment-tool-for-walking-and-cycling
+[^25]: https://www.theccc.org.uk/publication/the-seventh-carbon-budget/
+[^26]: https://www.gov.uk/guidance/transport-analysis-guidance-tag
+[^27]: https://www.gov.uk/guidance/transport-analysis-guidance-tag
 [^28]: https://www.bi.team/wp-content/uploads/2023/01/How-to-build-a-Net-Zero-society_Jan-2023.pdf
 [^29]: https://www.gov.uk/guidance/transport-analysis-guidance-tag
-
+[^30]: https://www.gov.uk/guidance/transport-analysis-guidance-tag
 [^31]: https://www.gov.uk/guidance/transport-analysis-guidance-tag
 [^32]: https://www.gov.uk/government/statistical-data-sets/road-traffic-statistics-tra
 [^33]: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/995110/rrcgb-valuation-methodology.pdf
